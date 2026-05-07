@@ -1,0 +1,13 @@
+{
+  "bundle": "/root/autodl-tmp/peg_bench_runs/reviewer_completion_bundle_20260504_222828",
+  "fast_tables": "/root/autodl-tmp/peg_bench_runs/reviewer_fast_tables_20260504_204203",
+  "per_asset_venue": "/root/autodl-tmp/peg_bench_runs/reviewer_slice_bootstrap_20260504_211251",
+  "hft_audit": "/root/autodl-tmp/peg_bench_runs/reviewer_hft_audit_fast_20260504_222535",
+  "fast_completion": "/root/autodl-tmp/peg_bench_runs/reviewer_fast_completion_20260504_222535",
+  "target_baselines": "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852",
+  "caveats": [
+    "Hft audit is fixed-action sensitivity, not full raw-L2 HftBacktest replay.",
+    "TABL-lite and iTransformer-lite are benchmark-native lite implementations, not official repo reproductions.",
+    "Fast per-asset/per-venue breakdown is supplemental and uses O(n) PEG action replay."
+  ]
+}

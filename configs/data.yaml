@@ -1,0 +1,10 @@
+seed: 7
+l2_path: data/raw/btcusdt_l2.csv
+trades_path: data/raw/btcusdt_trades.csv
+output_path: outputs/data/volume_bars.npz
+bar_mode: volume
+volume_threshold: 100000.0
+interval_ms: 1000
+depth: 10
+stride: 50
+max_bars:

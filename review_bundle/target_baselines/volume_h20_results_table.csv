@@ -1,0 +1,3 @@
+method,feature_mode,test_directional_accuracy,test_rank_ic,test_mse,test_mae,report_dir,notes
+tabl_lite,raw_lob_temporal_attention,0.5364604332368141,0.08352965618294841,1.5063207702879098e-07,0.0002806435786225218,/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/volume_h20/methods/tabl_lite/reports,TABL-lite benchmark-native temporal-attention bilinear-style network on raw LOB windows.
+itransformer_lite,benchmark_feature_inverted_transformer,0.5314756441740278,0.06481437199223453,1.5111699413336634e-07,0.00028180117241075644,/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/volume_h20/methods/itransformer_lite/reports,iTransformer-lite benchmark-native inverted Transformer on standardized benchmark-feature windows.

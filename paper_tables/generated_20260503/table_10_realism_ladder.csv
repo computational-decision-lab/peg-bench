@@ -1,0 +1,6 @@
+Level,Stage,Definition
+R0,Frictionless prediction,Offline predictive metrics only
+R1,Fees only,Add exchange fees
+R2,Fees + slippage,Add execution frictions
+R3,Fees + slippage + risk,Add drawdown or position constraints
+R4,Full realism,Add shift-aware stress evaluation

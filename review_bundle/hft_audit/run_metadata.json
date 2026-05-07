@@ -1,0 +1,6 @@
+{
+  "hftbacktest_import_status": "installed",
+  "hftbacktest_version": "2.4.4",
+  "interpretation": "Audit sensitivity over fixed PEG action paths with hftbacktest availability recorded; not a ranked model and not a full raw L2 HftBacktest replay conversion.",
+  "replay_engine": "fast_vectorized_peg_fee_impact_replay_no_ranked_risk_controls"
+}

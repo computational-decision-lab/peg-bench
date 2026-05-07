@@ -1,0 +1,26 @@
+encoded_path: outputs/vqvae/encoded_tokens.npz
+dataset_path: outputs/data/volume_bars.npz
+output_dir: outputs/baseline
+input_mode: codes
+seq_len: 96
+stride: 50
+target_key: return_20
+batch_size: 64
+epochs: 10
+learning_rate: 0.0003
+weight_decay: 0.01
+val_fraction: 0.17
+test_fraction: 0.17
+device: cuda
+amp: true
+seed: 7
+model:
+  input_mode: codes
+  vocab_size: 64
+  latent_dim: 64
+  seq_len: 96
+  d_model: 256
+  num_layers: 4
+  n_heads: 8
+  dropout: 0.1
+  rankic_weight: 0.1

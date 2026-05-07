@@ -1,0 +1,21 @@
+dataset_path: outputs/data/volume_bars.npz
+output_dir: outputs/vqvae
+batch_size: 128
+epochs: 10
+learning_rate: 0.001
+num_workers: 0
+device: cuda
+amp: true
+seed: 7
+model:
+  input_channels: 4
+  levels: 10
+  sides: 2
+  latent_dim: 64
+  num_embeddings: 64
+  hidden_channels: 32
+  commitment_cost: 0.25
+  beta_commit: 1.0
+  beta_sym: 0.1
+  decay: 0.99
+  dropout: 0.1

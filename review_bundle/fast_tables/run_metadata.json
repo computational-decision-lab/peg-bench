@@ -1,0 +1,10 @@
+{
+  "panels": {
+    "time_h5": "/root/autodl-tmp/peg_bench_runs/tardis_90d_time_h5_table2_compare_v1",
+    "time_h20": "/root/autodl-tmp/peg_bench_runs/tardis_90d_time_table2_compare_v1",
+    "time_h50": "/root/autodl-tmp/peg_bench_runs/tardis_90d_time_h50_table2_compare_v1",
+    "volume_h5": "/root/autodl-tmp/peg_bench_runs/tardis_90d_volume_h5_table2_compare_v1",
+    "volume_h20": "/root/autodl-tmp/peg_bench_runs/tardis_90d_volume_table2_compare_v1",
+    "volume_h50": "/root/autodl-tmp/peg_bench_runs/tardis_90d_volume_h50_table2_compare_v1"
+  }
+}

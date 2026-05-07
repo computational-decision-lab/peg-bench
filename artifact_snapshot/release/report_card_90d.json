@@ -1,0 +1,517 @@
+{
+  "status": "partial",
+  "scope": {
+    "name": "PEG-Bench 90d frozen report card",
+    "date_window": {
+      "start": "2025-09-28",
+      "end": "2025-12-26"
+    },
+    "split_days": {
+      "train": 60,
+      "val": 15,
+      "test": 15
+    },
+    "cost_ladder_bps": [
+      0,
+      1,
+      3,
+      5,
+      10
+    ],
+    "views": [
+      "time",
+      "volume"
+    ],
+    "assets_venues": [
+      "BTCUSDT/ETHUSDT x Binance/OKX"
+    ]
+  },
+  "prediction": {
+    "time_h5": {
+      "status": "computed",
+      "top_rank_ic_method": "lightgbm_lob",
+      "top_rank_ic": 0.14466706326195417,
+      "top_directional_accuracy_method": "histgbm_tokens",
+      "top_directional_accuracy": 0.6828025477707007,
+      "methods": [
+        "deeplob_timebars",
+        "histgbm_tokens",
+        "kairos_64code",
+        "lightgbm_lob",
+        "ridge_tokens"
+      ]
+    },
+    "time_h20": {
+      "status": "computed",
+      "top_rank_ic_method": "lightgbm_lob",
+      "top_rank_ic": 0.07923646011548598,
+      "top_directional_accuracy_method": "histgbm_tokens",
+      "top_directional_accuracy": 0.5566010422698321,
+      "methods": [
+        "deeplob_timebars",
+        "histgbm_tokens",
+        "kairos_64code",
+        "lightgbm_lob",
+        "ridge_tokens"
+      ]
+    },
+    "time_h50": {
+      "status": "computed",
+      "top_rank_ic_method": "lightgbm_lob",
+      "top_rank_ic": 0.04723028902055671,
+      "top_directional_accuracy_method": "lightgbm_lob",
+      "top_directional_accuracy": 0.5217815093611271,
+      "methods": [
+        "deeplob_timebars",
+        "histgbm_tokens",
+        "kairos_64code",
+        "lightgbm_lob",
+        "ridge_tokens"
+      ]
+    },
+    "volume_h5": {
+      "status": "computed",
+      "top_rank_ic_method": "lightgbm_lob",
+      "top_rank_ic": 0.27377402434459097,
+      "top_directional_accuracy_method": "histgbm_tokens",
+      "top_directional_accuracy": 0.632452445940405,
+      "methods": [
+        "histgbm_tokens",
+        "kairos_64code",
+        "lightgbm_lob",
+        "ridge_tokens"
+      ]
+    },
+    "volume_h20": {
+      "status": "computed",
+      "top_rank_ic_method": "lightgbm_lob",
+      "top_rank_ic": 0.21965682571567607,
+      "top_directional_accuracy_method": "lightgbm_lob",
+      "top_directional_accuracy": 0.5881733688211672,
+      "methods": [
+        "histgbm_tokens",
+        "kairos_64code",
+        "lightgbm_lob",
+        "ridge_tokens"
+      ]
+    },
+    "volume_h50": {
+      "status": "computed",
+      "top_rank_ic_method": "lightgbm_lob",
+      "top_rank_ic": 0.17081605379827175,
+      "top_directional_accuracy_method": "lightgbm_lob",
+      "top_directional_accuracy": 0.5717183578955549,
+      "methods": [
+        "histgbm_tokens",
+        "kairos_64code",
+        "lightgbm_lob",
+        "ridge_tokens"
+      ]
+    }
+  },
+  "execution": {
+    "time_h5": {
+      "status": "computed",
+      "top_r4_method": "histgbm_tokens",
+      "top_r4_sharpe": 0.0,
+      "top_r4_max_drawdown": 0.0,
+      "top_r4_turnover": 0.0
+    },
+    "time_h20": {
+      "status": "computed",
+      "top_r4_method": "kairos_64code",
+      "top_r4_sharpe": 0.2047109315793705,
+      "top_r4_max_drawdown": 0.017826754502796877,
+      "top_r4_turnover": 3.463347331682841
+    },
+    "time_h50": {
+      "status": "computed",
+      "top_r4_method": "ridge_tokens",
+      "top_r4_sharpe": 0.0,
+      "top_r4_max_drawdown": 0.0,
+      "top_r4_turnover": 0.0
+    },
+    "volume_h5": {
+      "status": "computed",
+      "top_r4_method": "kairos_64code",
+      "top_r4_sharpe": 0.06942281905031236,
+      "top_r4_max_drawdown": 0.009237421856960281,
+      "top_r4_turnover": 1.0
+    },
+    "volume_h20": {
+      "status": "computed",
+      "top_r4_method": "histgbm_tokens",
+      "top_r4_sharpe": 0.0,
+      "top_r4_max_drawdown": 0.0,
+      "top_r4_turnover": 0.0
+    },
+    "volume_h50": {
+      "status": "computed",
+      "top_r4_method": "kairos_64code",
+      "top_r4_sharpe": 0.05620809916279465,
+      "top_r4_max_drawdown": 0.027949184831231832,
+      "top_r4_turnover": 10.709106358885766
+    },
+    "ogpa_volume_h20": [
+      {
+        "label": "main_noaci",
+        "status": "completed",
+        "selected_risk_mode": "balanced",
+        "selected_scale": 0.02,
+        "selected_deadzone": 0.0,
+        "selection_score": 1.692541420434913,
+        "sharpe_3bps": -5.090856878116234,
+        "net_return_3bps": -0.13845055880304358,
+        "maxdd_3bps": 0.1416473723681122,
+        "turnover_3bps": 1.9973143739625812,
+        "calmar_3bps": -0.9774311834266804,
+        "liquidation_3bps": false,
+        "output_dir": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/main_volume_h20_balanced_noaci_bs16_retry1",
+        "backtest_path": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/main_volume_h20_balanced_noaci_bs16_retry1/eval/dpo_backtest.json"
+      },
+      {
+        "label": "main_aci",
+        "status": "completed",
+        "selected_risk_mode": "balanced",
+        "selected_scale": 0.02,
+        "selected_deadzone": 0.0,
+        "selection_score": 1.692541420434913,
+        "sharpe_3bps": -5.090856878116234,
+        "net_return_3bps": -0.13845055880304358,
+        "maxdd_3bps": 0.1416473723681122,
+        "turnover_3bps": 1.9973143739625812,
+        "calmar_3bps": -0.9774311834266804,
+        "liquidation_3bps": false,
+        "output_dir": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/main_volume_h20_balanced_noaci_bs16_retry1",
+        "backtest_path": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/main_volume_h20_balanced_noaci_bs16_retry1/dpo_backtest_aci.json"
+      },
+      {
+        "label": "rescue1_low_turnover",
+        "status": "completed",
+        "selected_risk_mode": "aggressive",
+        "selected_scale": 0.02,
+        "selected_deadzone": 0.05,
+        "selection_score": 0.0,
+        "sharpe_3bps": 0.0,
+        "net_return_3bps": 0.0,
+        "maxdd_3bps": 0.0,
+        "turnover_3bps": 0.0,
+        "calmar_3bps": 0.0,
+        "liquidation_3bps": false,
+        "output_dir": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/rescue1_volume_h20_low_turnover",
+        "backtest_path": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/rescue1_volume_h20_low_turnover/dpo_backtest.json"
+      },
+      {
+        "label": "rescue2_conservative",
+        "status": "completed",
+        "selected_risk_mode": "conservative",
+        "selected_scale": 0.02,
+        "selected_deadzone": 0.0,
+        "selection_score": 1.6925422857451249,
+        "sharpe_3bps": -5.090769653733808,
+        "net_return_3bps": -0.13844811462979578,
+        "maxdd_3bps": 0.1416449105480524,
+        "turnover_3bps": 1.9985599739011377,
+        "calmar_3bps": -0.9774309157604917,
+        "liquidation_3bps": false,
+        "output_dir": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/rescue2_volume_h20_conservative",
+        "backtest_path": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/rescue2_volume_h20_conservative/dpo_backtest.json"
+      }
+    ]
+  },
+  "gap": {
+    "status": "partial_current_prediction_first_panel",
+    "panels": {
+      "time": {
+        "h5": {
+          "metric_gap": 0.22770233510554386,
+          "ranking_gap": -0.3333333333333333,
+          "reversal_rate_at_k": 1.0,
+          "fragility_gap": {
+            "status": "computed",
+            "values": {
+              "deeplob_timebars": 43.772326992787015,
+              "histgbm_tokens": 0.0,
+              "kairos_64code": 6.113753023149757,
+              "lightgbm_lob": 3.3179290219484323,
+              "ridge_tokens": 0.0
+            }
+          },
+          "status": "computed",
+          "k": 1
+        },
+        "h20": {
+          "metric_gap": 0.1996372445516552,
+          "ranking_gap": -0.1111111111111111,
+          "reversal_rate_at_k": 1.0,
+          "fragility_gap": {
+            "status": "computed",
+            "values": {
+              "deeplob_timebars": 26.46919257999924,
+              "histgbm_tokens": 0.0,
+              "kairos_64code": 4.830751575690874,
+              "lightgbm_lob": 2.713209908014871,
+              "ridge_tokens": 0.0
+            }
+          },
+          "status": "computed",
+          "k": 1
+        },
+        "h50": {
+          "metric_gap": -0.044052764411259646,
+          "ranking_gap": -0.2,
+          "reversal_rate_at_k": 1.0,
+          "fragility_gap": {
+            "status": "computed",
+            "values": {
+              "deeplob_timebars": 9.330677067482553,
+              "histgbm_tokens": 3.0644852652964047,
+              "kairos_64code": 4.509825360555092,
+              "lightgbm_lob": 3.7199431789091246,
+              "ridge_tokens": 0.0
+            }
+          },
+          "status": "computed",
+          "k": 1
+        }
+      },
+      "volume": {
+        "h5": {
+          "metric_gap": -0.9783492961427049,
+          "ranking_gap": -1.0,
+          "reversal_rate_at_k": 1.0,
+          "fragility_gap": {
+            "status": "computed",
+            "values": {
+              "histgbm_tokens": 0.0,
+              "kairos_64code": 9.832108144928613,
+              "lightgbm_lob": 3.2154997763727886,
+              "ridge_tokens": 0.0
+            }
+          },
+          "status": "computed",
+          "k": 1
+        },
+        "h20": {
+          "metric_gap": 0.16059984946911585,
+          "ranking_gap": -0.6,
+          "reversal_rate_at_k": 1.0,
+          "fragility_gap": {
+            "status": "computed",
+            "values": {
+              "histgbm_tokens": 0.0,
+              "kairos_64code": 6.180860986019678,
+              "lightgbm_lob": 2.433852798944119,
+              "ridge_tokens": 0.0
+            }
+          },
+          "status": "computed",
+          "k": 1
+        },
+        "h50": {
+          "metric_gap": -0.9940342529197563,
+          "ranking_gap": -1.0,
+          "reversal_rate_at_k": 1.0,
+          "fragility_gap": {
+            "status": "computed",
+            "values": {
+              "histgbm_tokens": 2.6470624001345704,
+              "kairos_64code": 7.534180634636339,
+              "lightgbm_lob": 3.427104347336537,
+              "ridge_tokens": 1.7098031824627458
+            }
+          },
+          "status": "computed",
+          "k": 1
+        }
+      }
+    },
+    "note": "Gap metrics are reported on the prediction-first baseline panel only. OG-PA / DPO rows are execution-first slots and are not injected into R0->R4 ranking-gap calculations."
+  },
+  "robustness": {
+    "status": "computed_from_available_method_reports",
+    "note": "Worst-regime Sharpe / stress survival / regime variance are populated where the underlying benchmark report exposes them. Confidence intervals and seed-level appendix audits remain partial."
+  },
+  "auditability": {
+    "status": "partial",
+    "shared_split_protocol": true,
+    "shared_cost_ladder": true,
+    "shared_action_interface": true,
+    "processed_release_boundary_supported": true,
+    "ci_block_bootstrap": "partial",
+    "seed_sensitivity": "partial",
+    "runtime": "partial",
+    "split_stability": "partial"
+  },
+  "formal_method": {
+    "status": "completed_current_slot",
+    "rows": [
+      {
+        "label": "main_noaci",
+        "status": "completed",
+        "selected_risk_mode": "aggressive",
+        "selected_scale": 0.02,
+        "selected_deadzone": 0.0,
+        "selection_score": 1.682381392579784,
+        "selection_metric": "sharpe",
+        "sharpe_3bps": -7.161421087630007,
+        "net_return_3bps": -0.19694838088918232,
+        "maxdd_3bps": 0.1999969209211372,
+        "turnover_3bps": 2.000415075570345,
+        "calmar_3bps": -0.9847570651692334,
+        "liquidation_3bps": true,
+        "rank_ic": 0.004553089695903701,
+        "directional_accuracy": 0.4545470542690223,
+        "mse": 0.9999386282495788,
+        "mae": 0.9999692381060585,
+        "worst_regime_sharpe": -13.937444298987986,
+        "stress_day_survival": 1.0,
+        "regime_variance": 35.92865692284064,
+        "drawdown_violation_rate": 0.0,
+        "output_dir": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/main_volume_h20_balanced_noaci_bs16_retry1",
+        "backtest_path": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/main_volume_h20_balanced_noaci_bs16_retry1/dpo_backtest_noaci.json"
+      },
+      {
+        "label": "main_aci",
+        "status": "completed",
+        "selected_risk_mode": "balanced",
+        "selected_scale": 0.02,
+        "selected_deadzone": 0.0,
+        "selection_score": 1.692541420434913,
+        "selection_metric": "sharpe",
+        "sharpe_3bps": -5.090856878116234,
+        "net_return_3bps": -0.13845055880304358,
+        "maxdd_3bps": 0.1416473723681122,
+        "turnover_3bps": 1.9973143739625812,
+        "calmar_3bps": -0.9774311834266804,
+        "liquidation_3bps": false,
+        "rank_ic": 0.00376215991361213,
+        "directional_accuracy": 0.4545470542690223,
+        "mse": 0.9999727811021532,
+        "mae": 0.9999863149133534,
+        "worst_regime_sharpe": -12.947751989910124,
+        "stress_day_survival": 1.0,
+        "regime_variance": 34.45851081221129,
+        "drawdown_violation_rate": 0.0,
+        "output_dir": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/main_volume_h20_balanced_noaci_bs16_retry1",
+        "backtest_path": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/main_volume_h20_balanced_noaci_bs16_retry1/dpo_backtest_aci.json"
+      },
+      {
+        "label": "rescue1_low_turnover",
+        "status": "completed",
+        "selected_risk_mode": "aggressive",
+        "selected_scale": 0.02,
+        "selected_deadzone": 0.05,
+        "selection_score": 0.0,
+        "selection_metric": "sharpe",
+        "sharpe_3bps": 0.0,
+        "net_return_3bps": 0.0,
+        "maxdd_3bps": 0.0,
+        "turnover_3bps": 0.0,
+        "calmar_3bps": 0.0,
+        "liquidation_3bps": false,
+        "rank_ic": -0.005874503089254329,
+        "directional_accuracy": 0.5454529457309777,
+        "mse": 0.9999906632378958,
+        "mae": 0.9999952560621671,
+        "worst_regime_sharpe": 0.0,
+        "stress_day_survival": 1.0,
+        "regime_variance": 0.0,
+        "drawdown_violation_rate": 0.0,
+        "output_dir": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/rescue1_volume_h20_low_turnover",
+        "backtest_path": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/rescue1_volume_h20_low_turnover/dpo_backtest.json"
+      },
+      {
+        "label": "rescue2_conservative",
+        "status": "completed",
+        "selected_risk_mode": "conservative",
+        "selected_scale": 0.02,
+        "selected_deadzone": 0.0,
+        "selection_score": 1.6925422857451249,
+        "selection_metric": "sharpe",
+        "sharpe_3bps": -5.090769653733808,
+        "net_return_3bps": -0.13844811462979578,
+        "maxdd_3bps": 0.1416449105480524,
+        "turnover_3bps": 1.9985599739011377,
+        "calmar_3bps": -0.9774309157604917,
+        "liquidation_3bps": false,
+        "rank_ic": -0.009980190081044692,
+        "directional_accuracy": 0.4545470542690223,
+        "mse": 0.9998565287581102,
+        "mae": 0.9999281860761424,
+        "worst_regime_sharpe": -12.947692107481421,
+        "stress_day_survival": 1.0,
+        "regime_variance": 34.45847952777313,
+        "drawdown_violation_rate": 0.0,
+        "output_dir": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/rescue2_volume_h20_conservative",
+        "backtest_path": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/rescue2_volume_h20_conservative/dpo_backtest.json"
+      }
+    ],
+    "best_current_result": {
+      "job": "main_on",
+      "status": "completed",
+      "selected_risk_mode": "aggressive",
+      "selected_scale": 0.015,
+      "selected_deadzone": 0.0,
+      "selection_score": 1.6953808784912114,
+      "sharpe_3bps": -4.745989060813466,
+      "net_return_3bps": -0.12866354263542235,
+      "maxdd_3bps": 0.13124084962274196,
+      "turnover_3bps": 1.9978752040769905,
+      "calmar_3bps": -0.9803620062295527,
+      "liquidation_3bps": false,
+      "output_dir": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/backtest_rescue_main_on_smallgrid"
+    },
+    "claim": "backtest-only rescue improved over the prior formal-method best under the frozen 90d R4 evaluation.",
+    "backtest_only_rescue_best": {
+      "job": "main_on",
+      "status": "completed",
+      "selected_risk_mode": "aggressive",
+      "selected_scale": 0.015,
+      "selected_deadzone": 0.0,
+      "selection_score": 1.6953808784912114,
+      "sharpe_3bps": -4.745989060813466,
+      "net_return_3bps": -0.12866354263542235,
+      "maxdd_3bps": 0.13124084962274196,
+      "turnover_3bps": 1.9978752040769905,
+      "calmar_3bps": -0.9803620062295527,
+      "liquidation_3bps": false,
+      "output_dir": "/root/autodl-tmp/peg_bench_runs/final_90d_ogpa/backtest_rescue_main_on_smallgrid"
+    }
+  },
+  "wrapper_audit_volume_h20": {
+    "status": "completed",
+    "methods": [
+      {
+        "method": "kairos_64code",
+        "best_variant": "cost_threshold_plus_smoothing_plus_turnover",
+        "val_sharpe_3bps": 0.42213104242435473,
+        "test_sharpe_3bps": -1.6269447610779506,
+        "test_net_return_3bps": -0.10024659335613251,
+        "test_max_drawdown_3bps": 0.10035458207130432,
+        "test_turnover_3bps": 2.0,
+        "test_calmar_3bps": -0.9989238288657974
+      },
+      {
+        "method": "lightgbm_lob",
+        "best_variant": "cost_threshold_plus_smoothing_plus_turnover",
+        "val_sharpe_3bps": -0.47025781659740595,
+        "test_sharpe_3bps": 0.6289558371126206,
+        "test_net_return_3bps": 0.0003558228490874171,
+        "test_max_drawdown_3bps": 0.00037848876672796905,
+        "test_turnover_3bps": 3.759996815935665,
+        "test_calmar_3bps": 0.9400898506576922
+      },
+      {
+        "method": "ridge_tokens",
+        "best_variant": "cost_threshold",
+        "val_sharpe_3bps": 0.0,
+        "test_sharpe_3bps": 0.0,
+        "test_net_return_3bps": 0.0,
+        "test_max_drawdown_3bps": 0.0,
+        "test_turnover_3bps": 0.0,
+        "test_calmar_3bps": 0.0
+      }
+    ]
+  }
+}

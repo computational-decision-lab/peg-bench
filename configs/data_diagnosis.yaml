@@ -1,0 +1,11 @@
+input_dir: data/raw
+diagnosis_output_dir: outputs/diagnosis
+manifest_output: outputs/manifests/data_manifest.csv
+split_output: outputs/manifests/split_plan.csv
+report_output: outputs/diagnosis/data_quality_report.md
+log_file: outputs/logs/diagnose_raw_data.log
+expected_days: 30
+tolerance_days: 3
+train_ratio: 0.7
+val_ratio: 0.15
+test_ratio: 0.15

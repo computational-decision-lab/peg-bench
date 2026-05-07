@@ -1,0 +1,15 @@
+checkpoint_path: outputs/baseline/best_baseline.pt
+encoded_path: outputs/vqvae/encoded_tokens.npz
+dataset_path: outputs/data/volume_bars.npz
+output_path: outputs/eval/backtest_summary.json
+input_mode: codes
+seq_len: 96
+stride: 50
+target_key: return_20
+cost_bps_scan:
+  - 0.0
+  - 1.0
+  - 3.0
+  - 5.0
+  - 10.0
+device: cuda

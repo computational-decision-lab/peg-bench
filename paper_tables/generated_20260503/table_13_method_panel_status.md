@@ -1,0 +1,24 @@
+# Table 13
+
+PEG-Bench method panel and current evidence status.
+
+| method | family | status | scope | evidence_boundary | remove_from_main_text |
+| --- | --- | --- | --- | --- | --- |
+| no_trade | anchor | completed | 90d_partial_panel | All six 90d anchor rows exist under anchors_heuristics. | no |
+| buy_and_hold | anchor | completed | 90d_partial_panel | All six 90d anchor rows exist under anchors_heuristics. | no |
+| ofi_threshold | heuristic | completed | 90d_partial_panel | All six 90d heuristic rows exist under anchors_heuristics. | no |
+| ridge_tokens | low_capacity_ml | partial | 90d_partial_panel | Current 90d runs exist but are not all protocol-clean seq96 / wrapper-matrix-complete full-paper rows. | no |
+| ElasticNet | low_capacity_ml | target-only | paper_target | No completed 90d run/result table found. | no |
+| histgbm_tokens | tabular_ml | partial | 90d_partial_panel | Current 90d runs exist but full paper protocol boundary remains partial. | no |
+| lightgbm_lob | tabular_ml | partial | 90d_partial_panel | Current 90d runs exist; wrapper audit is completed only for volume_h20. | no |
+| deeplob_timebars | lob_neural | partial | 90d_partial_panel | Current 90d evidence exists for time panels only; not a six-panel completed row. | no |
+| kairos_64code | token_sequence | partial | 90d_partial_panel | Current 90d evidence exists but remains single-level 64-code rather than a full benchmark-wide KAIROS family completion. | no |
+| TABL | lob_neural | target-only | paper_target | No completed 90d implementation/run output found. | no |
+| Kronos | financial_ts | target-only | paper_target | No completed benchmark integration or result table found. | no |
+| iTransformer | financial_ts | target-only | paper_target | No completed 90d implementation/run output found. | no |
+| TimesFM | foundation_ts_appendix | target-only | paper_target | No completed 90d implementation/run output found. | no |
+| PPO | policy_learning | target-only | paper_target | No completed 90d benchmark runner result found. | no |
+| SAC | policy_learning | target-only | paper_target | No completed 90d benchmark runner result found. | no |
+| OG-PA / DPO | formal_method | diagnostic | 30d_case_study + 90d_diagnostic | 30d case-study evidence exists; current 90d rows are negative diagnostic slot artifacts and should not be framed as benchmark winners. | no |
+| ACI | formal_method_ablation | diagnostic | 30d_case_study + 90d_diagnostic | Use as gating/ablation note, not as a standalone winning baseline. | no |
+| HftBacktest | audit-only | audit-only | appendix_only | No completed integrated 90d leaderboard artifact; should remain outside ranked benchmark claims. | yes |

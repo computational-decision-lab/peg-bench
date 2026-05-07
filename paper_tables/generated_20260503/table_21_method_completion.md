@@ -1,0 +1,12 @@
+# Table 21
+
+Method-run completion checklist.
+
+| Method / status | Current 90D coverage | Remaining benchmark requirement |
+| --- | --- | --- |
+| Ridge, HistGBM, LightGBM, Kairos-64 | Populated on all six time/volume horizon panels under the shared evaluator; current compare roots support the paper's prediction-first claims. | Full protocol-clean refresh should rerun all panels with final 96-bar context and validation-tuned wrappers. |
+| DeepLOB | Populated on time-view panels; current implementation is time-bar oriented. | Volume-view DeepLOB or a clearly documented not-applicable boundary should be finalized for the full release. |
+| No-trade, buy-and-hold, OFI | Deterministic anchor/heuristic rows are present across the six completed panels and excluded from clean active model wins where appropriate. | Optional always-short, QI threshold, and OFI+QI combined sanity rows remain to be populated. |
+| Wrapper audit | Volume h20 wrapper audit is populated for Ridge, LightGBM, and Kairos-64 with validation-tuned wrapper parameters. | Apply the same wrapper protocol to all prediction-first models and all six panels; export a full wrapper matrix and heatmap. |
+| OG-PA / ACI case study | Volume h20 deployment-aware diagnostic rows are populated; ACI improves over the no-ACI diagnostic row but does not produce a headline win. | Cross-panel OG-PA runs and time h20 final evaluator rows are needed before making any general method claim. |
+| ElasticNet, TABL, Kronos, iTransformer, TimesFM, PPO, SAC, HftBacktest | Frozen targets or audit-only entries only; no normalized completed 90D result-table coverage. | Implement or integrate only if they can produce normalized CSV/JSON artifacts under the same evaluator. |

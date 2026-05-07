@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Data and protocol checklist for the current 90D artifact.}
+\label{tab:table_19_data_protocol_checklist}
+\begin{tabular}{llll}
+\toprule
+Required item & Current evidence & Paper use & Status \\
+\midrule
+90-day data scope & Status files report BTCUSDT and ETHUSDT on Binance and OKX, with 360 time-bar asset-days and 360 volume-bar asset-days passing the guard. & Supports Table 1, Table 23, and the data-contract claim. & Done \\
+Chronological split & Frozen 60/15/15 train/validation/test split over 2025-09-28 to 2025-12-26 UTC. & Supports Table 9 and all completed leaderboard claims. & Done \\
+Benchmark views and horizons & Time and volume views are populated at horizons 5, 20, and 50; raw L2 and execution logs remain part of the larger release contract. & Supports the six completed panels used in Tables 2–3. & Done \\
+Normalized evidence bundle & Release directory contains report cards, R0/R4 leaderboards, gap metrics, stress files, wrapper/formal diagnostics, panel bootstrap, and completion matrix. & Supports all generated paper tables and Figures 2–10. & Done \\
+Reproduction scripts & This pass adds table regeneration scripts and a paper table source map to the artifact snapshot. & Supports reviewer-time artifact inspection without requiring raw-feed reconstruction. & Done \\
+\bottomrule
+\end{tabular}
+\end{table}

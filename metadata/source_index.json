@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-05-02T18:33:10.410941+00:00",
+  "remote_repo": "/root/prediction-execution-gap",
+  "table_source_map": "/root/prediction-execution-gap/outputs/final_acceptance_v3/table_source_map.csv",
+  "paper_tables_root": "/root/prediction-execution-gap/paper_tables/generated_20260503",
+  "figure_root": "/root/prediction-execution-gap/figures/generated_90d",
+  "artifact_release_root": "/root/prediction-execution-gap/artifact_snapshot/release",
+  "claim_inventory": "/root/prediction-execution-gap/outputs/final_acceptance_v3/claim_inventory.csv",
+  "claim_to_evidence_map": "/root/prediction-execution-gap/outputs/final_acceptance_v3/claim_to_evidence_map.md",
+  "notes": [
+    "This pass follows the current PDF table structure rather than the older final_acceptance_v2 narrative.",
+    "Older outputs are preserved; new artifacts are written under final_acceptance_v3 and paper_tables/generated_20260503."
+  ]
+}

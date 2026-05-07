@@ -1,0 +1,11 @@
+# Table 34
+
+Recommended OG-PA run sheet.
+
+| Record | What to log | Why it matters |
+| --- | --- | --- |
+| Reference checkpoint | Training split, seed, and frozen evaluator version | Prevents silent drift between reference and preference phases |
+| Trajectory pool | Rollout horizon, number of candidates, and action constraints | Makes preference coverage and compute budget auditable |
+| Preference rule | Utility tuple, tie-breaking rule, and minimum margin δ | Defines which deployment behavior is being favored |
+| Optimization settings | β, update schedule, stopping rule, and rejection filters | Explains stability or collapse during alignment |
+| Evaluation manifest | Cost ladder, risk rules, regimes, and stress slices used for scoring | Ensures case-study claims remain on the shared benchmark contract |

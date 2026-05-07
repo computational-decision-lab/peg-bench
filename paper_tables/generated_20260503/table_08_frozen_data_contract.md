@@ -1,0 +1,13 @@
+# Table 8
+
+Frozen PEG-Bench data contract.
+
+| Item | Frozen contract |
+| --- | --- |
+| Time window | 2025-09-28 to 2025-12-26 UTC |
+| Assets / venues | BTCUSDT and ETHUSDT on Binance and OKX |
+| Feeds | Incremental L2 updates plus synchronized trades under a shared canonicalized feed schema |
+| Benchmark view | raw_l2_events, reconstructed_top10_lob, time_bars_1s, volume_bars, execution_logs |
+| State / labels | Forward return labels at horizons 5/20/50 under the shared state-construction logic |
+| Split | Strict 60/15/15 chronological train/validation/test split |
+| Coverage guard | time 360 asset-days; volume 360 asset-days |

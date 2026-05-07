@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Canonical archival release layout.}
+\label{tab:table_24_release_layout}
+\begin{tabular}{lll}
+\toprule
+Release component & Location & Contents \\
+\midrule
+Root metadata & artifact root & README.md, VERSION, paper table source map, stage conclusion \\
+Machine-readable metadata & metadata/ & artifact\_manifest.json, source\_index.json, checksums.sha256 \\
+Split manifests & artifact\_snapshot/release/ & copied manifest.json, panel summaries, and split CSVs \\
+Reports and evidence & artifact\_snapshot/release/ & report\_card\_90d.*, leaderboards, gap metrics, stress report, wrapper and OG-PA summaries \\
+Generated paper tables & paper\_tables/generated\_20260503/ & markdown, CSV, and TeX snippets for tables generated in this pass \\
+Reproduction scripts & artifact\_snapshot/scripts/ & reproduce\_tables.py and the source-map driven generation path \\
+\bottomrule
+\end{tabular}
+\end{table}

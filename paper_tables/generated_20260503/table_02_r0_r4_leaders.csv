@@ -1,0 +1,7 @@
+View,h,R0 top,RankIC,DA (%),R4 top,Sharpe,Shift
+Time,5,lightgbm_lob,0.1447,54.67,lightgbm_lob,-0.4318,No
+Time,20,lightgbm_lob,0.0792,53.96,kairos_64code,0.2047,Yes
+Time,50,lightgbm_lob,0.0472,52.18,kairos_64code,-0.2072,Yes
+Vol.,5,lightgbm_lob,0.2738,60.77,kairos_64code,0.0694,Yes
+Vol.,20,lightgbm_lob,0.2197,58.82,lightgbm_lob,-0.0723,No
+Vol.,50,lightgbm_lob,0.1708,57.17,kairos_64code,0.0562,Yes

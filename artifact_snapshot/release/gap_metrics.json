@@ -1,0 +1,109 @@
+{
+  "status": "partial_current_prediction_first_panel",
+  "panels": {
+    "time": {
+      "h5": {
+        "metric_gap": 0.22770233510554386,
+        "ranking_gap": -0.3333333333333333,
+        "reversal_rate_at_k": 1.0,
+        "fragility_gap": {
+          "status": "computed",
+          "values": {
+            "deeplob_timebars": 43.772326992787015,
+            "histgbm_tokens": 0.0,
+            "kairos_64code": 6.113753023149757,
+            "lightgbm_lob": 3.3179290219484323,
+            "ridge_tokens": 0.0
+          }
+        },
+        "status": "computed",
+        "k": 1
+      },
+      "h20": {
+        "metric_gap": 0.1996372445516552,
+        "ranking_gap": -0.1111111111111111,
+        "reversal_rate_at_k": 1.0,
+        "fragility_gap": {
+          "status": "computed",
+          "values": {
+            "deeplob_timebars": 26.46919257999924,
+            "histgbm_tokens": 0.0,
+            "kairos_64code": 4.830751575690874,
+            "lightgbm_lob": 2.713209908014871,
+            "ridge_tokens": 0.0
+          }
+        },
+        "status": "computed",
+        "k": 1
+      },
+      "h50": {
+        "metric_gap": -0.044052764411259646,
+        "ranking_gap": -0.2,
+        "reversal_rate_at_k": 1.0,
+        "fragility_gap": {
+          "status": "computed",
+          "values": {
+            "deeplob_timebars": 9.330677067482553,
+            "histgbm_tokens": 3.0644852652964047,
+            "kairos_64code": 4.509825360555092,
+            "lightgbm_lob": 3.7199431789091246,
+            "ridge_tokens": 0.0
+          }
+        },
+        "status": "computed",
+        "k": 1
+      }
+    },
+    "volume": {
+      "h5": {
+        "metric_gap": -0.9783492961427049,
+        "ranking_gap": -1.0,
+        "reversal_rate_at_k": 1.0,
+        "fragility_gap": {
+          "status": "computed",
+          "values": {
+            "histgbm_tokens": 0.0,
+            "kairos_64code": 9.832108144928613,
+            "lightgbm_lob": 3.2154997763727886,
+            "ridge_tokens": 0.0
+          }
+        },
+        "status": "computed",
+        "k": 1
+      },
+      "h20": {
+        "metric_gap": 0.16059984946911585,
+        "ranking_gap": -0.6,
+        "reversal_rate_at_k": 1.0,
+        "fragility_gap": {
+          "status": "computed",
+          "values": {
+            "histgbm_tokens": 0.0,
+            "kairos_64code": 6.180860986019678,
+            "lightgbm_lob": 2.433852798944119,
+            "ridge_tokens": 0.0
+          }
+        },
+        "status": "computed",
+        "k": 1
+      },
+      "h50": {
+        "metric_gap": -0.9940342529197563,
+        "ranking_gap": -1.0,
+        "reversal_rate_at_k": 1.0,
+        "fragility_gap": {
+          "status": "computed",
+          "values": {
+            "histgbm_tokens": 2.6470624001345704,
+            "kairos_64code": 7.534180634636339,
+            "lightgbm_lob": 3.427104347336537,
+            "ridge_tokens": 1.7098031824627458
+          }
+        },
+        "status": "computed",
+        "k": 1
+      }
+    }
+  },
+  "note": "Gap metrics are reported on the prediction-first baseline panel only. OG-PA / DPO rows are execution-first slots and are not injected into R0->R4 ranking-gap calculations."
+}

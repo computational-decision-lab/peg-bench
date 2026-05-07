@@ -1,0 +1,2 @@
+method,feature_mode,test_directional_accuracy,test_rank_ic,test_mse,test_mae,report_dir,notes
+elasticnet_tokens,token_frequency,0.5143312101910829,0.0,4.164759166192717e-07,0.00038757588174197623,/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h50/methods/elasticnet_tokens/reports,"ElasticNet token-frequency baseline; selected {'alpha': 1e-05, 'l1_ratio': 0.85, 'val_mse': 8.557874934922438e-06} on validation MSE."

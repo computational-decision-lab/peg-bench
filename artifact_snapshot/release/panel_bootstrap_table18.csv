@@ -1,0 +1,7 @@
+metric,estimate,ci95_low,ci95_high,unit,n_panels,bootstrap_type,n_bootstrap,seed
+winner_change_rate,0.6666666666666666,0.3333333333333333,1.0,fraction,6,panel_resample_with_replacement,1000,7
+mean_top_r4_sharpe,-0.06349749133593517,-0.22952095215710036,0.08878329834739859,Sharpe,6,panel_resample_with_replacement,1000,7
+mean_metric_gap,-0.238082814057901,-0.640716182293924,0.1600880412428033,correlation,6,panel_resample_with_replacement,1000,7
+mean_ranking_gap,-0.5407407407407407,-0.8518518518518517,-0.25925925925925924,Kendall tau,6,panel_resample_with_replacement,1000,7
+mean_rr1,1.0,1.0,1.0,fraction,6,panel_resample_with_replacement,1000,7
+negative_ranking_gap_fraction,1.0,1.0,1.0,fraction,6,panel_resample_with_replacement,1000,7

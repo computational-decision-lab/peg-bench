@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Frozen PEG-Bench data contract.}
+\label{tab:table_08_frozen_data_contract}
+\begin{tabular}{ll}
+\toprule
+Item & Frozen contract \\
+\midrule
+Time window & 2025-09-28 to 2025-12-26 UTC \\
+Assets / venues & BTCUSDT and ETHUSDT on Binance and OKX \\
+Feeds & Incremental L2 updates plus synchronized trades under a shared canonicalized feed schema \\
+Benchmark view & raw\_l2\_events, reconstructed\_top10\_lob, time\_bars\_1s, volume\_bars, execution\_logs \\
+State / labels & Forward return labels at horizons 5/20/50 under the shared state-construction logic \\
+Split & Strict 60/15/15 chronological train/validation/test split \\
+Coverage guard & time 360 asset-days; volume 360 asset-days \\
+\bottomrule
+\end{tabular}
+\end{table}

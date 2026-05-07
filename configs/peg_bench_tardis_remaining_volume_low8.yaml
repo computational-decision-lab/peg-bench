@@ -1,0 +1,18 @@
+pipeline_type: peg_bench
+raw_root: /root/autodl-tmp/tardis_full
+output_root: /root/autodl-tmp/peg_bench_runs/tardis_60d_remaining_volume_bundle
+selection_mode: discovered
+start_date: '2025-10-28'
+end_date: '2025-12-26'
+train_days: 60
+val_days: 0
+test_days: 0
+depth: 10
+interval_ms: 1000
+volume_threshold: 100000.0
+horizons: [5, 20, 50]
+bar_modes: [volume]
+context_len: 96
+num_workers: 8
+batch_size: 8
+checkpoint_every: 1

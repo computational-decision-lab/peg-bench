@@ -1,0 +1,11 @@
+# Table 12
+
+PEG-Bench report card.
+
+| Layer | Main-text metrics | Appendix extensions | Benchmark role |
+| --- | --- | --- | --- |
+| Prediction | RankIC; directional accuracy | MSE/MAE; calibration when available | Prediction proxy |
+| Execution | Post-cost Sharpe; MaxDD; turnover; Calmar | Net return; CVaR@95; average holding period | Deployment utility |
+| Gap | Kendall τ; Reversal Rate@k | Spearman ρ; pairwise inversion rate | Conclusion drift |
+| Robustness | Worst-regime Sharpe; stress-day survival | Regime variance; drawdown violation rate; recovery time | Shift fragility |
+| Auditability | Mean ± 95% CI; shared split protocol | Seed sensitivity; runtime; split stability | Audit trail |

@@ -1,0 +1,29 @@
+\begin{table}[t]
+\centering
+\caption{PEG-Bench method panel and current evidence status.}
+\label{tab:table_13_method_panel_status}
+\begin{tabular}{llllll}
+\toprule
+method & family & status & scope & evidence\_boundary & remove\_from\_main\_text \\
+\midrule
+no\_trade & anchor & completed & 90d\_partial\_panel & All six 90d anchor rows exist under anchors\_heuristics. & no \\
+buy\_and\_hold & anchor & completed & 90d\_partial\_panel & All six 90d anchor rows exist under anchors\_heuristics. & no \\
+ofi\_threshold & heuristic & completed & 90d\_partial\_panel & All six 90d heuristic rows exist under anchors\_heuristics. & no \\
+ridge\_tokens & low\_capacity\_ml & partial & 90d\_partial\_panel & Current 90d runs exist but are not all protocol-clean seq96 / wrapper-matrix-complete full-paper rows. & no \\
+ElasticNet & low\_capacity\_ml & target-only & paper\_target & No completed 90d run/result table found. & no \\
+histgbm\_tokens & tabular\_ml & partial & 90d\_partial\_panel & Current 90d runs exist but full paper protocol boundary remains partial. & no \\
+lightgbm\_lob & tabular\_ml & partial & 90d\_partial\_panel & Current 90d runs exist; wrapper audit is completed only for volume\_h20. & no \\
+deeplob\_timebars & lob\_neural & partial & 90d\_partial\_panel & Current 90d evidence exists for time panels only; not a six-panel completed row. & no \\
+kairos\_64code & token\_sequence & partial & 90d\_partial\_panel & Current 90d evidence exists but remains single-level 64-code rather than a full benchmark-wide KAIROS family completion. & no \\
+TABL & lob\_neural & target-only & paper\_target & No completed 90d implementation/run output found. & no \\
+Kronos & financial\_ts & target-only & paper\_target & No completed benchmark integration or result table found. & no \\
+iTransformer & financial\_ts & target-only & paper\_target & No completed 90d implementation/run output found. & no \\
+TimesFM & foundation\_ts\_appendix & target-only & paper\_target & No completed 90d implementation/run output found. & no \\
+PPO & policy\_learning & target-only & paper\_target & No completed 90d benchmark runner result found. & no \\
+SAC & policy\_learning & target-only & paper\_target & No completed 90d benchmark runner result found. & no \\
+OG-PA / DPO & formal\_method & diagnostic & 30d\_case\_study + 90d\_diagnostic & 30d case-study evidence exists; current 90d rows are negative diagnostic slot artifacts and should not be framed as benchmark winners. & no \\
+ACI & formal\_method\_ablation & diagnostic & 30d\_case\_study + 90d\_diagnostic & Use as gating/ablation note, not as a standalone winning baseline. & no \\
+HftBacktest & audit-only & audit-only & appendix\_only & No completed integrated 90d leaderboard artifact; should remain outside ranked benchmark claims. & yes \\
+\bottomrule
+\end{tabular}
+\end{table}

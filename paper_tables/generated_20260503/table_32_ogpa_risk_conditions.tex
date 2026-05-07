@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\caption{Canonical OG-PA risk conditions.}
+\label{tab:table_32_ogpa_risk_conditions}
+\begin{tabular}{lll}
+\toprule
+Condition & Name & Lexicographic priority \\
+\midrule
+z1 & Aggressive & Maximize cumulative return; liquidated trajectories rank last \\
+z2 & Balanced & Maximize Sharpe-style score; tie-break by lower MaxDD \\
+z3 & Conservative & Maximize Calmar-style return-to-drawdown ratio; liquidated trajectories rank last \\
+z4 & Low-turnover & Maximize post-cost net return subject to low turnover \\
+\bottomrule
+\end{tabular}
+\end{table}

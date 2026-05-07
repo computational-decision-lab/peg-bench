@@ -1,0 +1,39 @@
+symbol: BTCUSDT
+date: '2025-10-01'
+raw_dir: data/raw/binance_one_day
+output_root: outputs/experiments/binance_one_day_2025-10-01
+levels_per_side: 10
+volume_threshold: 50000000.0
+primary_bar: time
+bar_modes:
+  - time
+  - volume
+vqvae:
+  epochs: 2
+  batch_size: 128
+  learning_rate: 0.001
+baseline:
+  epochs: 2
+  batch_size: 64
+  seq_len: 64
+  stride: 16
+  rankic_weight: 0.1
+preference:
+  mode: lexicographic
+  template: balanced
+  seq_len: 64
+  horizon: 32
+  stride: 64
+  max_contexts: 24
+  min_pairs_target: 64
+  max_pairs: 512
+dpo:
+  epochs: 1
+  batch_size: 16
+  beta: 0.1
+  entropy_coef: 0.01
+aci:
+  alpha: 0.1
+  alpha_target: 0.1
+  gamma: 0.01
+  uncertainty_threshold: 0.5

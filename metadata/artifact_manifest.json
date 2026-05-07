@@ -1,0 +1,139 @@
+{
+  "generated_at": "2026-05-02T18:33:10.411140+00:00",
+  "sources": {
+    "final90": "/root/prediction-execution-gap/outputs/final_90d",
+    "accept_v2": "/root/prediction-execution-gap/outputs/final_acceptance_v2",
+    "time_manifest": "/root/autodl-tmp/peg_bench_runs/tardis_90d_time_bundle/manifest.json",
+    "volume_manifest": "/root/autodl-tmp/peg_bench_runs/tardis_90d_volume_bundle/manifest.json",
+    "time_panel": "/root/autodl-tmp/peg_bench_runs/tardis_90d_time_standardized_inputs/panels/time_panel_summary.json",
+    "volume_panel": "/root/autodl-tmp/peg_bench_runs/tardis_90d_volume_standardized_inputs/panels/volume_panel_summary.json"
+  },
+  "generated_tables": {
+    "table_01": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_01_core_contract.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_01_core_contract.tex",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_01_core_contract.csv"
+    ],
+    "table_02": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_02_r0_r4_leaders.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_02_r0_r4_leaders.tex",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_02_r0_r4_leaders.csv"
+    ],
+    "table_03": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_03_gap_metrics.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_03_gap_metrics.tex",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_03_gap_metrics.csv"
+    ],
+    "table_04": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_04_execution_diagnostics.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_04_execution_diagnostics.tex"
+    ],
+    "table_09": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_09_split.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_09_split.tex",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_09_split.csv"
+    ],
+    "table_10": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_10_realism_ladder.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_10_realism_ladder.tex",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_10_realism_ladder.csv"
+    ],
+    "table_11": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_11_cost_status.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_11_cost_status.tex",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_11_cost_status.csv"
+    ],
+    "table_12": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_12_report_card.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_12_report_card.tex",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_12_report_card.csv"
+    ],
+    "table_13": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_13_method_panel_status.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_13_method_panel_status.tex",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_13_method_panel_status.csv"
+    ],
+    "table_16": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_16_wrapper_formal_rows.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_16_wrapper_formal_rows.tex",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_16_wrapper_formal_rows.csv"
+    ],
+    "table_17": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_17_stress_h20.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_17_stress_h20.tex",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_17_stress_h20.csv"
+    ],
+    "table_18": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_18_panel_bootstrap.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_18_panel_bootstrap.tex",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_18_panel_bootstrap.csv"
+    ],
+    "table_19": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_19_data_protocol_checklist.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_19_data_protocol_checklist.tex"
+    ],
+    "table_20": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_20_display_checklist.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_20_display_checklist.tex"
+    ],
+    "table_21": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_21_method_completion.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_21_method_completion.tex"
+    ],
+    "table_22": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_22_missing_display.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_22_missing_display.tex"
+    ],
+    "table_23": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_23_contract_vs_evidence.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_23_contract_vs_evidence.tex",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_23_contract_vs_evidence.csv"
+    ],
+    "table_24": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_24_release_layout.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_24_release_layout.tex"
+    ],
+    "table_25": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_25_disclosure.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_25_disclosure.tex"
+    ],
+    "table_26": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_26_compute_disclosure.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_26_compute_disclosure.tex"
+    ],
+    "table_27": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_27_implementation_anchors.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_27_implementation_anchors.tex"
+    ],
+    "table_28": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_28_method_panel.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_28_method_panel.tex",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_28_method_panel.csv"
+    ],
+    "table_29": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_29_excluded_candidates.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_29_excluded_candidates.tex"
+    ],
+    "table_30": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_30_baseline_anchors.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_30_baseline_anchors.tex"
+    ],
+    "table_31": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_31_kairos_vs_ogpa.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_31_kairos_vs_ogpa.tex"
+    ],
+    "table_32": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_32_ogpa_risk_conditions.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_32_ogpa_risk_conditions.tex"
+    ],
+    "table_33": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_33_ogpa_defaults.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_33_ogpa_defaults.tex"
+    ],
+    "table_34": [
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_34_ogpa_run_sheet.md",
+      "/root/prediction-execution-gap/paper_tables/generated_20260503/table_34_ogpa_run_sheet.tex"
+    ]
+  },
+  "new_bundle_root": "/root/prediction-execution-gap/outputs/final_acceptance_v3"
+}

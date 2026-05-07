@@ -1,0 +1,2558 @@
+{
+  "evaluation_split": "test",
+  "leaderboard": [
+    {
+      "method": "itransformer_lite",
+      "post_cost_sharpe": 0.0,
+      "rank_ic": 0.009444404234020097,
+      "max_drawdown": 0.0,
+      "turnover": 0.0,
+      "num_days": 15
+    },
+    {
+      "method": "tabl_lite",
+      "post_cost_sharpe": 0.0,
+      "rank_ic": 0.0014200087525699527,
+      "max_drawdown": 0.0,
+      "turnover": 0.0,
+      "num_days": 15
+    }
+  ],
+  "methods": {
+    "itransformer_lite": {
+      "prediction": {
+        "rank_ic": {
+          "mean": 0.009444404234020097,
+          "ci95": [
+            0.000736981037352919,
+            0.017935104628439988
+          ],
+          "num_days": 15
+        },
+        "directional_accuracy": {
+          "mean": 0.49242424242424243,
+          "ci95": [
+            0.48835963134530014,
+            0.4972112044006949
+          ],
+          "num_days": 15
+        },
+        "mse": {
+          "mean": 1.6689096962349706e-07,
+          "ci95": [
+            1.1563502121158748e-07,
+            2.147559718939112e-07
+          ],
+          "num_days": 15
+        },
+        "mae": {
+          "mean": 0.00023774019890055297,
+          "ci95": [
+            0.00019600075616190395,
+            0.0002806161912062511
+          ],
+          "num_days": 15
+        }
+      },
+      "execution": {
+        "post_cost_sharpe": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "max_drawdown": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "turnover": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "calmar": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "net_return": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "cvar95": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "average_holding_period": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "cost_ladder": {
+          "0.0": {
+            "sharpe": {
+              "mean": 0.02188613358788302,
+              "ci95": [
+                -0.31283539040942004,
+                0.3701900524927855
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.006277951196362112,
+              "ci95": [
+                0.004444264509616877,
+                0.008522918466267026
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 164.85865569934248,
+              "ci95": [
+                164.13069996900856,
+                165.64848499289403
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.3088644099063049,
+              "ci95": [
+                -0.0707445096296428,
+                0.8042790560127565
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": -0.00014417520420509863,
+              "ci95": [
+                -0.0019941102402294664,
+                0.0015706395352229087
+              ],
+              "num_days": 15
+            }
+          },
+          "1.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "3.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "5.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "10.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          }
+        },
+        "r1_cost_ladder": {
+          "0.0": {
+            "sharpe": {
+              "mean": 0.0606749608469189,
+              "ci95": [
+                -0.26417397323621367,
+                0.3985553466638188
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.006211856218008258,
+              "ci95": [
+                0.0044035158610691,
+                0.008245664281466704
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 164.85865569934248,
+              "ci95": [
+                164.1563470793702,
+                165.63753167980974
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.3462126864047759,
+              "ci95": [
+                -0.0389484547047962,
+                0.8171080717860852
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 2.6092854598693444e-05,
+              "ci95": [
+                -0.0018115583457903378,
+                0.0016726008158172382
+              ],
+              "num_days": 15
+            }
+          },
+          "1.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "3.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "5.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "10.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          }
+        },
+        "r2_cost_ladder": {
+          "0.0": {
+            "sharpe": {
+              "mean": 0.02188613358788302,
+              "ci95": [
+                -0.3185336865689933,
+                0.36670290408901857
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.006277951196362112,
+              "ci95": [
+                0.004470432014081312,
+                0.008342765371414613
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 164.85865569934248,
+              "ci95": [
+                164.10641655706178,
+                165.63344289139533
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.3088644099063049,
+              "ci95": [
+                -0.07229570303009249,
+                0.7793601452395137
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": -0.00014417520420509863,
+              "ci95": [
+                -0.001970862484004228,
+                0.0014374939919491515
+              ],
+              "num_days": 15
+            }
+          },
+          "1.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "3.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "5.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "10.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          }
+        },
+        "r3_cost_ladder": {
+          "0.0": {
+            "sharpe": {
+              "mean": 0.02188613358788302,
+              "ci95": [
+                -0.2908761256389624,
+                0.371478386652209
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.006277951196362112,
+              "ci95": [
+                0.004412662705488776,
+                0.008356953680182294
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 164.85865569934248,
+              "ci95": [
+                164.13495587185338,
+                165.58637489093158
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.3088644099063049,
+              "ci95": [
+                -0.03939950657972121,
+                0.7691109014135545
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": -0.00014417520420509863,
+              "ci95": [
+                -0.0019043518863530045,
+                0.0015558371346095215
+              ],
+              "num_days": 15
+            }
+          },
+          "1.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "3.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "5.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "10.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          }
+        },
+        "r4_cost_ladder": {
+          "0.0": {
+            "sharpe": {
+              "mean": 0.02188613358788302,
+              "ci95": [
+                -0.3090336795368506,
+                0.40307529357592703
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.006277951196362112,
+              "ci95": [
+                0.0044211481938303595,
+                0.00852950564313228
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 164.85865569934248,
+              "ci95": [
+                164.1677517267006,
+                165.61921580971529
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.3088644099063049,
+              "ci95": [
+                -0.06370575805609949,
+                0.8202000075071956
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": -0.00014417520420509863,
+              "ci95": [
+                -0.002040325488757565,
+                0.0016581287647750092
+              ],
+              "num_days": 15
+            }
+          },
+          "1.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "3.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "5.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "10.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          }
+        }
+      },
+      "robustness": {
+        "worst_regime_sharpe": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "stress_day_survival": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "num_days": 15
+        }
+      },
+      "auditability": {
+        "num_days": 15,
+        "evaluation_split": "test",
+        "source_paths": [
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-12.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-13.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-14.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-15.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-16.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-17.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-18.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-19.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-20.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-21.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-22.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-23.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-24.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-25.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/itransformer_lite/reports/2025-12-26.json"
+        ],
+        "dates": [
+          "2025-12-12",
+          "2025-12-13",
+          "2025-12-14",
+          "2025-12-15",
+          "2025-12-16",
+          "2025-12-17",
+          "2025-12-18",
+          "2025-12-19",
+          "2025-12-20",
+          "2025-12-21",
+          "2025-12-22",
+          "2025-12-23",
+          "2025-12-24",
+          "2025-12-25",
+          "2025-12-26"
+        ],
+        "expected_num_days": 15,
+        "observed_num_days": 15,
+        "coverage_ratio": 1.0,
+        "expected_dates": [
+          "2025-12-12",
+          "2025-12-13",
+          "2025-12-14",
+          "2025-12-15",
+          "2025-12-16",
+          "2025-12-17",
+          "2025-12-18",
+          "2025-12-19",
+          "2025-12-20",
+          "2025-12-21",
+          "2025-12-22",
+          "2025-12-23",
+          "2025-12-24",
+          "2025-12-25",
+          "2025-12-26"
+        ],
+        "observed_dates": [
+          "2025-12-12",
+          "2025-12-13",
+          "2025-12-14",
+          "2025-12-15",
+          "2025-12-16",
+          "2025-12-17",
+          "2025-12-18",
+          "2025-12-19",
+          "2025-12-20",
+          "2025-12-21",
+          "2025-12-22",
+          "2025-12-23",
+          "2025-12-24",
+          "2025-12-25",
+          "2025-12-26"
+        ],
+        "missing_dates": [],
+        "extra_dates": []
+      }
+    },
+    "tabl_lite": {
+      "prediction": {
+        "rank_ic": {
+          "mean": 0.0014200087525699527,
+          "ci95": [
+            -0.002658065410343948,
+            0.0049838263570647695
+          ],
+          "num_days": 15
+        },
+        "directional_accuracy": {
+          "mean": 0.5307662613395097,
+          "ci95": [
+            0.5191635302065237,
+            0.5437852248600656
+          ],
+          "num_days": 15
+        },
+        "mse": {
+          "mean": 1.6719095868121697e-07,
+          "ci95": [
+            1.0970668212877212e-07,
+            2.2019339447238945e-07
+          ],
+          "num_days": 15
+        },
+        "mae": {
+          "mean": 0.00023909905289871554,
+          "ci95": [
+            0.00019327558398572647,
+            0.000281880859240796
+          ],
+          "num_days": 15
+        }
+      },
+      "execution": {
+        "post_cost_sharpe": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "max_drawdown": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "turnover": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "calmar": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "net_return": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "cvar95": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "average_holding_period": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "cost_ladder": {
+          "0.0": {
+            "sharpe": {
+              "mean": -0.315475439340181,
+              "ci95": [
+                -0.5999107910064161,
+                -0.05672904783691381
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.015272009660959044,
+              "ci95": [
+                0.011978202779795907,
+                0.01864181830419944
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 72.43602557182312,
+              "ci95": [
+                67.59806518754301,
+                77.31174739082344
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": -0.04426079544086551,
+              "ci95": [
+                -0.2128443818004335,
+                0.13851835297399878
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": -0.003311308765494285,
+              "ci95": [
+                -0.006403155649825474,
+                -0.00042137576980426166
+              ],
+              "num_days": 15
+            }
+          },
+          "1.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "3.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "5.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "10.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          }
+        },
+        "r1_cost_ladder": {
+          "0.0": {
+            "sharpe": {
+              "mean": -0.29877704029640373,
+              "ci95": [
+                -0.6053812683655732,
+                -0.04102156179092893
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.015234133935416701,
+              "ci95": [
+                0.01185412713230898,
+                0.018483160901129586
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 72.43602557182312,
+              "ci95": [
+                67.39252365409396,
+                77.74710163264845
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": -0.025863998937666468,
+              "ci95": [
+                -0.20193048569160676,
+                0.1495988336646598
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": -0.003214100900898746,
+              "ci95": [
+                -0.0064310170890993805,
+                -0.0004875007038544525
+              ],
+              "num_days": 15
+            }
+          },
+          "1.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "3.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "5.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "10.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          }
+        },
+        "r2_cost_ladder": {
+          "0.0": {
+            "sharpe": {
+              "mean": -0.315475439340181,
+              "ci95": [
+                -0.6111563303636389,
+                -0.05779742343221082
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.015272009660959044,
+              "ci95": [
+                0.011806204266573616,
+                0.018647834853519254
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 72.43602557182312,
+              "ci95": [
+                67.76892296651378,
+                77.73422739888231
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": -0.04426079544086551,
+              "ci95": [
+                -0.22384491578627486,
+                0.14296759574668397
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": -0.003311308765494285,
+              "ci95": [
+                -0.006591170976420205,
+                -0.0004617874064701728
+              ],
+              "num_days": 15
+            }
+          },
+          "1.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "3.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "5.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "10.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          }
+        },
+        "r3_cost_ladder": {
+          "0.0": {
+            "sharpe": {
+              "mean": -0.315475439340181,
+              "ci95": [
+                -0.6076241402878859,
+                -0.059585250476504724
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.015272009660959044,
+              "ci95": [
+                0.012092002731704174,
+                0.018633366875623232
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 72.43602557182312,
+              "ci95": [
+                67.07910377996974,
+                77.36979638474683
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": -0.04426079544086551,
+              "ci95": [
+                -0.22244692143598996,
+                0.12580913455543466
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": -0.003311308765494285,
+              "ci95": [
+                -0.006354774047467681,
+                -0.0005170320938928375
+              ],
+              "num_days": 15
+            }
+          },
+          "1.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "3.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "5.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "10.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          }
+        },
+        "r4_cost_ladder": {
+          "0.0": {
+            "sharpe": {
+              "mean": -0.315475439340181,
+              "ci95": [
+                -0.598262697703136,
+                -0.045401126111487056
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.015272009660959044,
+              "ci95": [
+                0.011869692468010937,
+                0.018392703191098658
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 72.43602557182312,
+              "ci95": [
+                67.53375966367312,
+                77.25775954339653
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": -0.04426079544086551,
+              "ci95": [
+                -0.20630774301231458,
+                0.1377964824354958
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": -0.003311308765494285,
+              "ci95": [
+                -0.006242359586006088,
+                -0.0004330299412290801
+              ],
+              "num_days": 15
+            }
+          },
+          "1.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "3.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "5.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          },
+          "10.0": {
+            "sharpe": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "max_drawdown": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "turnover": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "calmar": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            },
+            "net_pnl": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "num_days": 15
+            }
+          }
+        }
+      },
+      "robustness": {
+        "worst_regime_sharpe": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "num_days": 15
+        },
+        "stress_day_survival": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "num_days": 15
+        }
+      },
+      "auditability": {
+        "num_days": 15,
+        "evaluation_split": "test",
+        "source_paths": [
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-12.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-13.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-14.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-15.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-16.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-17.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-18.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-19.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-20.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-21.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-22.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-23.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-24.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-25.json",
+          "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852/time_h20/methods/tabl_lite/reports/2025-12-26.json"
+        ],
+        "dates": [
+          "2025-12-12",
+          "2025-12-13",
+          "2025-12-14",
+          "2025-12-15",
+          "2025-12-16",
+          "2025-12-17",
+          "2025-12-18",
+          "2025-12-19",
+          "2025-12-20",
+          "2025-12-21",
+          "2025-12-22",
+          "2025-12-23",
+          "2025-12-24",
+          "2025-12-25",
+          "2025-12-26"
+        ],
+        "expected_num_days": 15,
+        "observed_num_days": 15,
+        "coverage_ratio": 1.0,
+        "expected_dates": [
+          "2025-12-12",
+          "2025-12-13",
+          "2025-12-14",
+          "2025-12-15",
+          "2025-12-16",
+          "2025-12-17",
+          "2025-12-18",
+          "2025-12-19",
+          "2025-12-20",
+          "2025-12-21",
+          "2025-12-22",
+          "2025-12-23",
+          "2025-12-24",
+          "2025-12-25",
+          "2025-12-26"
+        ],
+        "observed_dates": [
+          "2025-12-12",
+          "2025-12-13",
+          "2025-12-14",
+          "2025-12-15",
+          "2025-12-16",
+          "2025-12-17",
+          "2025-12-18",
+          "2025-12-19",
+          "2025-12-20",
+          "2025-12-21",
+          "2025-12-22",
+          "2025-12-23",
+          "2025-12-24",
+          "2025-12-25",
+          "2025-12-26"
+        ],
+        "missing_dates": [],
+        "extra_dates": []
+      }
+    }
+  },
+  "gap": {
+    "metric_gap": 0.0,
+    "ranking_gap": 0.0,
+    "reversal_rate_at_k": 0.0,
+    "fragility_gap": {
+      "status": "computed",
+      "values": {
+        "itransformer_lite": 0.0,
+        "tabl_lite": 0.0
+      }
+    },
+    "status": "computed",
+    "k": 1
+  },
+  "auditability": {
+    "bootstrap_samples": 1000,
+    "random_seed": 7,
+    "num_methods": 2,
+    "num_daily_reports": 30,
+    "expected_dates_in_split": [
+      "2025-12-12",
+      "2025-12-13",
+      "2025-12-14",
+      "2025-12-15",
+      "2025-12-16",
+      "2025-12-17",
+      "2025-12-18",
+      "2025-12-19",
+      "2025-12-20",
+      "2025-12-21",
+      "2025-12-22",
+      "2025-12-23",
+      "2025-12-24",
+      "2025-12-25",
+      "2025-12-26"
+    ]
+  }
+}

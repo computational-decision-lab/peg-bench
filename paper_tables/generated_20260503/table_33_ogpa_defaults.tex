@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\caption{Current OG-PA implementation defaults.}
+\label{tab:table_33_ogpa_defaults}
+\begin{tabular}{lll}
+\toprule
+Component & Current default & Role in OG-PA \\
+\midrule
+Risk set Z & 5 values from 0.1 to 5.0 & Spans aggressive-to-conservative action scaling \\
+Trajectory length T & 100 bars & Defines the horizon over which path-dependent outcomes are measured \\
+Trajectories per condition & 1,000 & Controls coverage of each risk slice \\
+Preference target size & 50,000 pairs & Keeps the pair dataset large enough for stable minibatch training \\
+Minimum margin & 0.01 & Rejects nearly tied winner/loser examples \\
+Transaction cost in pair generation & 3 bps & Makes the oracle execution-aware rather than frictionless \\
+DPO temperature β & 0.1 & Controls winner/loser separation in the objective \\
+Learning rate & 1e-5 & AdamW step size for preference optimization \\
+Batch size / epochs & 32 / 10 & Current training budget for the case-study prototype \\
+Entropy coefficient & 0.01 & Reduces collapse to overly deterministic actions \\
+Warmup / grad clip & 100 steps / 1.0 & Stabilizes early optimization and limits exploding gradients \\
+Train / val split & 90\% / 10\% on pair set & Supports pair-level validation before benchmark evaluation \\
+\bottomrule
+\end{tabular}
+\end{table}

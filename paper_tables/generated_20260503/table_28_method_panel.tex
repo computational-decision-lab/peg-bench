@@ -1,0 +1,29 @@
+\begin{table}[t]
+\centering
+\caption{Model and method panel for PEG-Bench evaluation.}
+\label{tab:table_28_method_panel}
+\begin{tabular}{llll}
+\toprule
+Role & Model or method & Status & Why retained / status \\
+\midrule
+anchor & no\_trade & completed & All six 90d anchor rows exist under anchors\_heuristics. \\
+anchor & buy\_and\_hold & completed & All six 90d anchor rows exist under anchors\_heuristics. \\
+heuristic & ofi\_threshold & completed & All six 90d heuristic rows exist under anchors\_heuristics. \\
+low\_capacity\_ml & ridge\_tokens & partial & Current 90d runs exist but are not all protocol-clean seq96 / wrapper-matrix-complete full-paper rows. \\
+low\_capacity\_ml & ElasticNet & target-only & No completed 90d run/result table found. \\
+tabular\_ml & histgbm\_tokens & partial & Current 90d runs exist but full paper protocol boundary remains partial. \\
+tabular\_ml & lightgbm\_lob & partial & Current 90d runs exist; wrapper audit is completed only for volume\_h20. \\
+lob\_neural & deeplob\_timebars & partial & Current 90d evidence exists for time panels only; not a six-panel completed row. \\
+token\_sequence & kairos\_64code & partial & Current 90d evidence exists but remains single-level 64-code rather than a full benchmark-wide KAIROS family completion. \\
+lob\_neural & TABL & target-only & No completed 90d implementation/run output found. \\
+financial\_ts & Kronos & target-only & No completed benchmark integration or result table found. \\
+financial\_ts & iTransformer & target-only & No completed 90d implementation/run output found. \\
+foundation\_ts\_appendix & TimesFM & target-only & No completed 90d implementation/run output found. \\
+policy\_learning & PPO & target-only & No completed 90d benchmark runner result found. \\
+policy\_learning & SAC & target-only & No completed 90d benchmark runner result found. \\
+formal\_method & OG-PA / DPO & diagnostic & 30d case-study evidence exists; current 90d rows are negative diagnostic slot artifacts and should not be framed as benchmark winners. \\
+formal\_method\_ablation & ACI & diagnostic & Use as gating/ablation note, not as a standalone winning baseline. \\
+audit-only & HftBacktest & audit-only & No completed integrated 90d leaderboard artifact; should remain outside ranked benchmark claims. \\
+\bottomrule
+\end{tabular}
+\end{table}

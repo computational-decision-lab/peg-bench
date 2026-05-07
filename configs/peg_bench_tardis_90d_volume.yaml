@@ -1,0 +1,17 @@
+pipeline_type: peg_bench
+raw_root: /root/autodl-tmp/tardis_full
+output_root: /root/autodl-tmp/peg_bench_runs/tardis_90d_volume_bundle
+start_date: '2025-09-28'
+end_date: '2025-12-26'
+train_days: 60
+val_days: 15
+test_days: 15
+depth: 10
+interval_ms: 1000
+volume_threshold: 100000.0
+horizons: [5, 20, 50]
+bar_modes: [volume]
+context_len: 96
+num_workers: 24
+batch_size: 24
+checkpoint_every: 1

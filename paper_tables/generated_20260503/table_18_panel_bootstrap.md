@@ -1,0 +1,12 @@
+# Table 18
+
+Panel-bootstrap uncertainty over the six completed 90D panels.
+
+| Metric | Estimate | 95% CI | Unit |
+| --- | --- | --- | --- |
+| Winner-change rate | 0.667 | [0.333, 1.000] | fraction |
+| Mean top R4 Sharpe | -0.063 | [-0.230, 0.089] | Sharpe |
+| Mean Metric Gap | -0.238 | [-0.641, 0.160] | correlation |
+| Mean Ranking Gap | -0.541 | [-0.852, -0.259] | Kendall tau |
+| Mean RR@1 | 1.000 | [1.000, 1.000] | fraction |
+| Negative Ranking Gap fraction | 1.000 | [1.000, 1.000] | fraction |

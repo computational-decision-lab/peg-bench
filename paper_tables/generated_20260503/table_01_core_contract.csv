@@ -1,0 +1,5 @@
+Layer,Frozen contract,Completed 90D evidence
+Data and split,90 days; BTCUSDT/ETHUSDT; Binance/OKX; 60/15/15 chronology,Time and volume views each pass 360 asset-days; horizons 5/20/50 populated
+Evaluation,R0–R4 ladder; 0/1/3/5/10 bps costs; stress slices,R0 and clean active R4 report cards populated for six panels
+Methods,"Prediction-first, anchor, heuristic, wrapper, policy, and preference slots","LightGBM, Kairos, DeepLOB, Ridge/HistGBM-style controls, anchors, heuristic rows, wrapper rows, and OG-PA diagnostics populated where reported"
+Artifact boundary,"Processed shards, evaluator outputs, manifests, generated tables, claim map","Current snapshot includes normalized CSV/JSON files, paper tables, reproduction scripts, metadata, and SHA256 manifest"

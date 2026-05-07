@@ -1,0 +1,5 @@
+{
+  "draws": 1000,
+  "target_root": "/root/autodl-tmp/peg_bench_runs/reviewer_target_baselines_20260504_203852",
+  "interpretation": "Fast supplemental completion from frozen test-day action-path report cards and reviewer target outputs."
+}

@@ -1,0 +1,25 @@
+preferences_path: outputs/preferences/preferences.pkl
+reference_checkpoint: outputs/baseline/best_baseline.pt
+output_dir: outputs/dpo
+beta: 0.1
+learning_rate: 0.0003
+batch_size: 32
+epochs: 10
+entropy_coef: 0.01
+covariance_floor: 0.0001
+reference_update_tau: 0.01
+reference_update_interval: 50
+validation_fraction: 0.1
+device: cuda
+seed: 7
+simulator:
+  max_position: 1.0
+  liquidation_drawdown: 0.2
+  hard_stop_drawdown: 0.1
+  periods_per_year: 31536000
+  cost:
+    fee_bps: 3.0
+    impact_coef: 0.1
+    impact_mode: sqrt
+    min_depth: 1.0e-06
+    max_slippage_bps: 25.0

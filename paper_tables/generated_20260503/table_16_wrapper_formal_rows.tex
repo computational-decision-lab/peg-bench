@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Execution-aware wrapper and formal-method rows separated from the clean ranked R4 leaderboard.}
+\label{tab:table_16_wrapper_formal_rows}
+\begin{tabular}{llllll}
+\toprule
+Role & Method & Sharpe @3 bps & Max DD & Turnover & Evaluation use \\
+\midrule
+Wrapper audit & Kairos-64 + wrapper & -1.6269 & 0.1004 & 2.0000 & Validation-frozen bridge; outside clean leaderboard. \\
+Wrapper audit & LightGBM + wrapper & 0.6290 & 0.0004 & 3.7600 & Validation-frozen bridge; outside clean leaderboard. \\
+Wrapper audit & Ridge + threshold & 0.0000 & 0.0000 & 0.0000 & Validation-frozen bridge; outside clean leaderboard. \\
+Formal diagnostic & OG-PA no ACI & -7.1614 & 0.2000 & 2.0004 & Diagnostic method slot; outside clean leaderboard. \\
+Formal diagnostic & OG-PA ACI & -5.0909 & 0.1416 & 1.9973 & Diagnostic method slot; outside clean leaderboard. \\
+Formal diagnostic & OG-PA low-turnover & 0.0000 & 0.0000 & 0.0000 & Diagnostic method slot; outside clean leaderboard. \\
+Formal diagnostic & OG-PA conservative & -5.0908 & 0.1416 & 1.9986 & Diagnostic method slot; outside clean leaderboard. \\
+\bottomrule
+\end{tabular}
+\end{table}
