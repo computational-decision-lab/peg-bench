@@ -38,3 +38,5 @@ Users can reproduce the paper tables/figures from the normalized evidence includ
 - [Paper and evidence map](paper_tables/generated_20260503/)
 - [Normalized 90D evidence](artifact_snapshot/release/)
 - [Reproduction scripts](artifact_snapshot/scripts/)
+
+GitHub Pages is enabled for this repository with the GitHub Actions source. A fork must enable Pages from repository settings before its first deployment; subsequent pushes to main use the Pages workflow.

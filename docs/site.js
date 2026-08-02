@@ -5,6 +5,7 @@
   var rows = document.querySelectorAll("[data-panel]");
 
   function setView(view) {
+    document.body.dataset.view = view;
     buttons.forEach(function (button) {
       var active = button.dataset.view === view;
       button.classList.toggle("is-active", active);
@@ -12,8 +13,7 @@
     });
 
     rows.forEach(function (row) {
-      var show = view === "prediction" || row.dataset.panel === "execution";
-      row.hidden = !show;
+      row.hidden = false;
     });
   }
 
@@ -22,6 +22,8 @@
       setView(button.dataset.view);
     });
   });
+
+  setView("prediction");
 
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
