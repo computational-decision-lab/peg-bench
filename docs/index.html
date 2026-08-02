@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PEG-Bench | When prediction rankings fail</title>
+  <meta name="description" content="PEG-Bench measures when offline prediction leaderboards stop supporting execution-aware utility conclusions.">
+  <link rel="canonical" href="https://colin-wang-research.github.io/peg-bench/">
+  <meta name="theme-color" content="#f5f1e9">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="PEG-Bench">
+  <meta property="og:title" content="When prediction rankings fail">
+  <meta property="og:description" content="A licensed-data benchmark protocol for measuring the Prediction-Execution Gap.">
+  <meta property="og:url" content="https://colin-wang-research.github.io/peg-bench/">
+  <meta property="og:image" content="https://colin-wang-research.github.io/peg-bench/assets/peg-bench-thesis-overview.png">
+  <meta property="og:image:alt" content="PEG-Bench realism ladder from data contract to verdict reversal">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="When prediction rankings fail">
+  <meta name="twitter:description" content="A benchmark protocol for measuring the Prediction-Execution Gap.">
+  <meta name="twitter:image" content="https://colin-wang-research.github.io/peg-bench/assets/peg-bench-thesis-overview.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23101722'/%3E%3Cpath d='M13 17h38M13 32h38M13 47h38' stroke='%23e85b52' stroke-width='6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "When Prediction Leaderboards Fail: Benchmarking the Prediction-Execution Gap",
+    "url": "https://colin-wang-research.github.io/peg-bench/",
+    "isAccessibleForFree": true,
+    "abstract": "PEG-Bench is a licensed-data benchmark protocol and auditable evaluation artifact for measuring when offline prediction rankings cease to support execution-aware utility conclusions.",
+    "keywords": ["benchmark", "sequential decision making", "execution-aware evaluation", "limit order book"],
+    "encoding": {
+      "@type": "MediaObject",
+      "contentUrl": "https://colin-wang-research.github.io/peg-bench/assets/peg-bench-paper.pdf",
+      "encodingFormat": "application/pdf"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="wordmark" href="#top" aria-label="PEG-Bench home"><span>PEG</span><i>/</i>BENCH</a>
+      <div class="nav-links">
+        <a href="#thesis">Thesis</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#artifact">Artifact</a>
+        <a class="nav-button" href="assets/peg-bench-paper.pdf">Read paper <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero band">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Prediction-Execution Gap Benchmark</p>
+          <h1>When the offline winner is not the <em>useful</em> winner.</h1>
+          <p class="hero-lede">PEG-Bench makes a familiar evaluation failure measurable: a model can lead on prediction metrics, then lose its conclusion when forecasts become actions, fees, risk, and stress.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#evidence">See the evidence <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="assets/peg-bench-paper.pdf">Download the paper <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero-note"><span class="rule-mark" aria-hidden="true"></span> A benchmark protocol and audit artifact, not a claim of tradable alpha.</p>
+        </div>
+        <figure class="hero-figure">
+          <img src="assets/peg-bench-thesis-overview.png" width="1600" height="900" alt="Five-stage PEG-Bench diagram showing a data contract, forecast-to-action interface, R0 to R4 evaluator, unified report card, and verdict reversal">
+          <figcaption><span>01</span> The evaluation object changes as realism increases.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="signal-band" aria-label="Completed evidence snapshot">
+      <div class="shell signal-grid">
+        <div class="signal-intro"><p class="kicker">Completed 90-day artifact</p><p>Six time and volume panels. One frozen contract. No hand-picked winner.</p></div>
+        <div class="signal"><strong>4 / 6</strong><span>clean-active R4 winners change</span></div>
+        <div class="signal"><strong>-0.541</strong><span>mean ranking gap, panel bootstrap</span></div>
+        <div class="signal"><strong>1.0</strong><span>RR@1 in every completed panel</span></div>
+      </div>
+    </section>
+
+    <section id="thesis" class="section shell">
+      <div class="section-heading">
+        <p class="kicker">The question</p>
+        <h2>Does a better forecast still make a better decision?</h2>
+      </div>
+      <div class="thesis-grid">
+        <div class="thesis-statement">
+          <p>Most model comparisons stop at <mark>R0</mark>: correlation, accuracy, or ranking quality. PEG-Bench keeps the same predictions moving through a shared action interface and asks what survives at <mark>R4</mark>.</p>
+          <p>The benchmark uses cryptocurrency limit-order books as a compact stress test for evaluation science. It does not present the market setting as evidence of production profitability.</p>
+        </div>
+        <div class="quote-block">
+          <p class="quote-mark" aria-hidden="true">“</p>
+          <blockquote>Prediction quality should be the starting point of deployment evaluation, not its endpoint.</blockquote>
+          <cite>PEG-Bench paper, conclusion</cite>
+        </div>
+      </div>
+    </section>
+
+    <section class="ladder-band band">
+      <div class="shell">
+        <div class="section-heading section-heading-light">
+          <p class="kicker">The evaluation ladder</p>
+          <h2>One method. Five increasingly real questions.</h2>
+        </div>
+        <ol class="ladder">
+          <li><span class="ladder-id">R0</span><div><strong>Prediction</strong><p>RankIC, directional accuracy, MSE</p></div></li>
+          <li><span class="ladder-id">R1</span><div><strong>Fees</strong><p>0 / 1 / 3 / 5 / 10 bps cost ladder</p></div></li>
+          <li><span class="ladder-id">R2</span><div><strong>Execution</strong><p>Slippage, turnover, action path</p></div></li>
+          <li><span class="ladder-id">R3</span><div><strong>Risk</strong><p>Drawdown and path-dependent utility</p></div></li>
+          <li><span class="ladder-id">R4</span><div><strong>Stress realism</strong><p>Regimes, survival, and robustness</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="evidence" class="section shell">
+      <div class="section-heading evidence-heading">
+        <div>
+          <p class="kicker">The evidence</p>
+          <h2>Ranking quality and execution utility separate.</h2>
+        </div>
+        <div class="view-switch" role="group" aria-label="Evidence view">
+          <button type="button" class="switch-button is-active" data-view="prediction" aria-pressed="true">Prediction view</button>
+          <button type="button" class="switch-button" data-view="execution" aria-pressed="false">Execution view</button>
+        </div>
+      </div>
+      <p class="section-intro">LightGBM is the strongest R0 predictor in all six completed panels. At the 3 bps headline setting, the clean-active R4 winner changes in four panels; in the two unchanged panels, that active winner remains negative after costs.</p>
+      <div class="result-table-wrap">
+        <table class="result-table">
+          <caption class="sr-only">R0 prediction leaders and clean active R4 leaders for six completed panels</caption>
+          <thead><tr><th scope="col">Panel</th><th scope="col">R0 top predictor</th><th scope="col">R0 RankIC</th><th scope="col">R4 top active method</th><th scope="col">R4 Sharpe at 3 bps</th><th scope="col">Verdict</th></tr></thead>
+          <tbody>
+            <tr data-panel="prediction"><th scope="row">Time h5</th><td>LightGBM</td><td class="num prediction-value">0.145</td><td>LightGBM</td><td class="num execution-value">-0.432</td><td><span class="status same">same, negative</span></td></tr>
+            <tr data-panel="execution"><th scope="row">Time h20</th><td>LightGBM</td><td class="num prediction-value">0.079</td><td>Kairos-64</td><td class="num execution-value">+0.205</td><td><span class="status changed">changed</span></td></tr>
+            <tr data-panel="execution"><th scope="row">Time h50</th><td>LightGBM</td><td class="num prediction-value">0.047</td><td>Kairos-64</td><td class="num execution-value">-0.207</td><td><span class="status changed">changed</span></td></tr>
+            <tr data-panel="execution"><th scope="row">Volume h5</th><td>LightGBM</td><td class="num prediction-value">0.274</td><td>Kairos-64</td><td class="num execution-value">+0.069</td><td><span class="status changed">changed</span></td></tr>
+            <tr data-panel="prediction"><th scope="row">Volume h20</th><td>LightGBM</td><td class="num prediction-value">0.220</td><td>LightGBM</td><td class="num execution-value">-0.072</td><td><span class="status same">same, negative</span></td></tr>
+            <tr data-panel="execution"><th scope="row">Volume h50</th><td>LightGBM</td><td class="num prediction-value">0.171</td><td>Kairos-64</td><td class="num execution-value">+0.056</td><td><span class="status changed">changed</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note"><span class="note-dot" aria-hidden="true"></span> The table separates the clean-active R4 identity audit from the official RR@1 protocol universe.</p>
+      <div class="figure-grid">
+        <figure class="figure-card"><img src="assets/winner-shift.png" width="1600" height="700" loading="lazy" alt="Slopegraph showing LightGBM as the R0 top predictor and four Kairos-64 winner changes at clean active R4"><figcaption><strong>Winner shift</strong><span>Four of six panels change top active method.</span></figcaption></figure>
+        <figure class="figure-card"><img src="assets/r4-sharpe-heatmap.png" width="1038" height="600" loading="lazy" alt="Heatmap of clean active R4 Sharpe across methods and time or volume panels"><figcaption><strong>Utility map</strong><span>Post-cost utility is uneven, often negative, and never a prediction-only metric.</span></figcaption></figure>
+        <figure class="figure-card"><img src="assets/rankic-vs-r4-sharpe.png" width="1038" height="600" loading="lazy" alt="Scatter plots separating R0 RankIC, execution activity, and R4 Sharpe"><figcaption><strong>Three axes</strong><span>Predictive signal, turnover, and utility describe different objects.</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="method-band band">
+      <div class="shell method-grid">
+        <div>
+          <p class="kicker">What PEG-Bench fixes</p>
+          <h2>A shared contract makes conclusions comparable.</h2>
+        </div>
+        <ul class="method-list">
+          <li><span>90 days</span><p>BTCUSDT and ETHUSDT across Binance and OKX</p></li>
+          <li><span>60 / 15 / 15</span><p>Strict chronological train, validation, and test split</p></li>
+          <li><span>5 / 20 / 50</span><p>Time- and volume-bar horizons in each view</p></li>
+          <li><span>R0 → R4</span><p>Prediction, cost, execution, risk, and stress report card</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="artifact" class="section shell handoff">
+      <div class="section-heading">
+        <p class="kicker">Read, inspect, reproduce</p>
+        <h2>The evidence is packaged for an honest audit.</h2>
+      </div>
+      <div class="handoff-grid">
+        <a class="handoff-link" href="assets/peg-bench-paper.pdf"><span class="handoff-index">01</span><span><strong>Paper</strong><small>Anonymous NeurIPS 2026 submission PDF</small></span><span aria-hidden="true">↗</span></a>
+        <a class="handoff-link" href="https://github.com/colin-wang-research/peg-bench/tree/main/artifact_snapshot/release"><span class="handoff-index">02</span><span><strong>Normalized evidence</strong><small>90D report cards, gap metrics, manifests</small></span><span aria-hidden="true">↗</span></a>
+        <a class="handoff-link" href="https://github.com/colin-wang-research/peg-bench/tree/main/artifact_snapshot/scripts"><span class="handoff-index">03</span><span><strong>Reproduction scripts</strong><small>Table and figure reconstruction entry points</small></span><span aria-hidden="true">↗</span></a>
+        <a class="handoff-link" href="https://github.com/colin-wang-research/peg-bench/tree/main/src"><span class="handoff-index">04</span><span><strong>Evaluator and tests</strong><small>Protocol-facing code and test suite</small></span><span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="boundary-band">
+      <div class="shell boundary-grid">
+        <div><p class="kicker">Release boundary</p><h2>Auditable does not mean unrestricted.</h2></div>
+        <div class="boundary-copy"><p>This public release includes the evaluator, schemas, split and stress manifests, normalized evidence, generated tables, figures, and inspection samples.</p><p>It does not redistribute raw vendor L2 feeds, tick-level trades, or full processed tensors derived from licensed data. Full raw-data reconstruction requires authorized access to the underlying market-data provider.</p><a class="text-link" href="https://github.com/colin-wang-research/peg-bench/blob/main/RELEASE_SCOPE.md">Read the full release scope <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div><a class="wordmark" href="#top"><span>PEG</span><i>/</i>BENCH</a><p>Benchmarking when predictive rankings diverge from execution-aware utility.</p></div>
+      <div class="footer-links"><a href="assets/peg-bench-paper.pdf">Paper</a><a href="https://github.com/colin-wang-research/peg-bench">GitHub</a><a href="https://github.com/colin-wang-research/peg-bench/blob/main/LICENSE">MIT license</a><a href="#top">Back to top ↑</a></div>
+      <p class="footer-meta">Public-safe research release · <span id="year">2026</span></p>
+    </div>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
+</html>

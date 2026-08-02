@@ -3,6 +3,8 @@
 ## Public release shape
 This package is the recommended public release shape for PEG-Bench under licensed third-party market-data constraints.
 
+The GitHub Pages research site is a presentation layer over this same public-safe package. It does not add raw market data or change the reproducibility boundary.
+
 Released:
 - benchmark protocol-facing code and configs
 - normalized evidence used by the paper
