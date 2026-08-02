@@ -2,7 +2,7 @@
 
 ## Goal
 
-Publish a public, static research site for PEG-Bench at `https://colin-wang-research.github.io/peg-bench/` while preserving the repository's existing public-safe artifact boundary.
+Publish a public, static research site for PEG-Bench at `https://computational-decision-lab.github.io/peg-bench/` while preserving the repository's existing public-safe artifact boundary.
 
 ## Audience and narrative
 

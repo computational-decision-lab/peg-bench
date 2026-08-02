@@ -12,7 +12,7 @@
 
 - Preserve the public-safe boundary: do not add raw vendor L2 data or full processed benchmark tensors.
 - Keep the site readable without JavaScript and responsive at mobile widths.
-- Use the canonical URL `https://colin-wang-research.github.io/peg-bench/` in metadata.
+- Use the canonical URL `https://computational-decision-lab.github.io/peg-bench/` in metadata.
 - Keep the paper and evidence claims aligned with the submitted 90D artifact.
 - Do not introduce a build framework or external runtime dependency.
 
@@ -55,7 +55,7 @@
 - [ ] Add a workflow triggered by pushes to `main` and manual dispatch that uploads `docs/` and deploys it with `actions/deploy-pages`.
 - [ ] Update the README with the website URL, paper/artifact navigation, and the same data-license boundary used on the site.
 - [ ] Add a short release note stating that the website is a presentation layer over the existing public-safe artifact.
-- [ ] Commit the curated site and workflow on the clone's `main` branch, then push to `colin-wang-research/peg-bench`.
+- [x] Commit the curated site and workflow on the clone's `main` branch, then push to `computational-decision-lab/peg-bench`.
 - [ ] Configure repository metadata and Pages workflow mode with the authenticated GitHub CLI.
 
 ### Task 4: Verify the release
