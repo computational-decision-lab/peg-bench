@@ -1,20 +1,20 @@
-# PEG-Bench Safe Release Candidate
+# PEG-Bench Public Research Release
 
 > Research site: [colin-wang-research.github.io/peg-bench](https://colin-wang-research.github.io/peg-bench/)
 
-PEG-Bench is a benchmark protocol for testing when offline prediction rankings stop supporting execution-aware utility conclusions. Start with the [research site](https://colin-wang-research.github.io/peg-bench/) for the paper thesis, six-panel evidence, and public release boundary.
+PEG-Bench is a benchmark protocol for testing when offline prediction rankings stop supporting execution-aware utility conclusions. Start with the [research site](https://colin-wang-research.github.io/peg-bench/) for the structured technical report, six-panel evidence, uncertainty notes, and public release boundary.
 
-This release candidate is designed for the lowest-risk public distribution path for a licensed-data benchmark submission. It releases the benchmark protocol, evaluator-facing artifacts, normalized evidence, and table/figure reproduction assets, while excluding the underlying commercial market-data payloads and benchmark-ready processed arrays derived from them.
+This public research release provides the benchmark protocol, evaluator-facing artifacts, normalized evidence, and table/figure reproduction assets while excluding the underlying commercial market-data payloads and benchmark-ready processed arrays derived from them.
 
 ## Intended positioning
-PEG-Bench is a benchmark protocol and executable evaluation artifact over licensed third-party market data. This release candidate publishes:
+PEG-Bench is a benchmark protocol and executable evaluation artifact over licensed third-party market data. This release publishes:
 - evaluator and code needed to inspect the benchmark contract
 - frozen split/protocol/stress manifests
 - normalized evidence files used by the paper
 - result and table reproduction scripts
 - paper tables and auditable completion bundles
 
-This release candidate does **not** publish:
+This release does **not** publish:
 - raw vendor L2 market data
 - full processed benchmark tensors/arrays reconstructed from licensed raw data
 
@@ -27,7 +27,7 @@ This shape minimizes legal and licensing risk while preserving artifact auditabi
 - `artifact_snapshot/scripts/`: scripts for reproducing tables from normalized evidence
 - `metadata/`: artifact/source manifests
 - `paper_tables/generated_20260503/`: generated table CSV/TEX/MD files
-- `review_bundle/`: reviewer-oriented supplemental evidence bundle
+- `review_bundle/`: supplemental evidence bundle
 - `scripts/`, `configs/`, `src/`, `tests/`: code required to inspect and run the benchmark tooling
 
 ## Reproducibility boundary
@@ -35,6 +35,7 @@ Users can reproduce the paper tables/figures from the normalized evidence includ
 
 ## Quick links
 - [Research site](https://colin-wang-research.github.io/peg-bench/)
+- [Technical report](https://colin-wang-research.github.io/peg-bench/assets/peg-bench-technical-report.pdf)
 - [Paper and evidence map](paper_tables/generated_20260503/)
 - [Normalized 90D evidence](artifact_snapshot/release/)
 - [Reproduction scripts](artifact_snapshot/scripts/)

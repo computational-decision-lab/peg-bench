@@ -671,7 +671,7 @@ def final_reports(out: Path) -> None:
     (out / "completed_vs_supplemental_vs_target.md").write_text("# Completed vs Supplemental vs Target\n\n" + "\n".join(f"- {k}: {v}" for k, v in categories) + "\n", encoding="utf-8")
     (out / "remaining_not_completed.md").write_text("# Remaining Not Completed\n\n- official TABL full 90D\n- official iTransformer full 90D\n- TimesFM\n- Kronos official\n- PPO/SAC full benchmark\n- full raw-L2 HftBacktest replay\n- formal-method creative rescue\n", encoding="utf-8")
     (out / "paper_claim_sync_report.md").write_text("# Paper Claim Sync Report\n\nMain empirical claims must use only generated CSV/TEX rows in this bundle. Motivating-slice protocol-different rows and formal-method diagnostics must not be promoted to completed wins.\n", encoding="utf-8")
-    (out / "final_submission_readiness.md").write_text("# Final Submission Readiness\n\nP0 evidence pass is designed for NeurIPS E&D submission claims over completed six-panel evidence and available core methods. P1 evidence is supplemental/audit-only where marked. P2 is not run.\n", encoding="utf-8")
+    (out / "final_public_evidence_readiness.md").write_text("# Final Public Evidence Readiness\n\nP0 evidence pass covers completed six-panel evidence and available core methods. P1 evidence is supplemental or audit-only where marked. P2 is not run.\n", encoding="utf-8")
     sha256_manifest(out)
 
 

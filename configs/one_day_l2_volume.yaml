@@ -1,14 +1,14 @@
 dataset_mode: event_l2
 symbol: BTCUSDT
 date: '2025-10-26'
-l2_path: data/raw/neurips_data/binance_incremental_book_L2_2025-10-26_BTCUSDT.csv.gz
-output_root: outputs/experiments/neurips_one_day_2025-10-26
+l2_path: data/raw/market_data/binance_incremental_book_L2_2025-10-26_BTCUSDT.csv.gz
+output_root: outputs/experiments/one_day_2025-10-26-volume
 levels_per_side: 10
 volume_threshold: 250000.0
 volume_max_bars: 6000
-primary_bar: time
+primary_bar: volume
 bar_modes:
-  - time
+  - volume
 vqvae:
   epochs: 2
   batch_size: 128

@@ -25,7 +25,7 @@
 - Create: `docs/assets/r4-sharpe-heatmap.png`
 - Create: `docs/assets/rankic-vs-r4-sharpe.png`
 
-- [ ] Copy the anonymous paper PDF and existing PNG figures from the local PEG-Bench package into the clean clone.
+- [x] Copy the public technical report and existing PNG figures from the local PEG-Bench package into the clean clone.
 - [ ] Rasterize the two selected result PDFs for browser-safe figure rendering; keep the source result files in the artifact directories unchanged.
 - [ ] Verify that all five assets exist, have non-zero sizes, and contain no raw-data paths in their names or metadata.
 

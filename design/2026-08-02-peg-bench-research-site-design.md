@@ -18,13 +18,13 @@ The site must distinguish official clean-active leaderboard evidence from diagno
 
 - `docs/index.html`: one-page research narrative with semantic sections for thesis, ladder, results, paper, artifact, and release boundary.
 - `docs/styles.css`: responsive visual system based on the repository's research-instrument direction; no framework or external runtime dependency.
-- `docs/site.js`: progressive enhancement only, including the evidence-view toggle and current year; content remains readable without JavaScript.
+- `docs/site.js`: progressive enhancement only for the current year; content remains readable without JavaScript.
 - `docs/assets/`: intentionally selected paper PDF and derived figures only.
 - `.github/workflows/pages.yml`: GitHub Pages deployment using the official Pages actions.
 
 ## Content and assets
 
-The site includes the anonymous paper PDF and figures derived from the public-safe local paper package. It links back to the existing repository artifact rather than duplicating raw data. The public page repeats the licensing disclaimer: raw vendor L2 feeds and full processed tensors are not redistributed; full raw-data reconstruction requires authorized provider access.
+The site includes the public technical report and figures derived from the public-safe local research package. It links back to the existing repository artifact rather than duplicating raw data. The public page repeats the licensing disclaimer: raw vendor L2 feeds and full processed tensors are not redistributed; full raw-data reconstruction requires authorized provider access.
 
 ## Metadata and accessibility
 

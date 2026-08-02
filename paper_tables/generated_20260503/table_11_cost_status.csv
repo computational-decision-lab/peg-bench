@@ -1,4 +1,4 @@
-Cost (bps),Current 90D artifact status,How to read it in this submission
+Cost (bps),Current 90D evidence status,How to read it in the public report
 0,Available in underlying benchmark reports; not normalized as a full-paper six-panel table,Defines the frictionless end of the ladder; not the headline deployment claim.
 1,Available in underlying benchmark reports; not normalized as a full-paper six-panel table,"Useful for sensitivity and collapse audits, but not the headline main-text setting."
 3,Populated headline setting for the completed 90D report card,"Used by the clean active R4 leaderboards, wrapper audit, stress diagnostics, and current generated tables."

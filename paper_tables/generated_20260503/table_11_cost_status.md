@@ -1,8 +1,8 @@
 # Table 11
 
-Cost-ladder evidence status for the current 90D submission artifact.
+Cost-ladder evidence status for the current 90D public release.
 
-| Cost (bps) | Current 90D artifact status | How to read it in this submission |
+| Cost (bps) | Current 90D evidence status | How to read it in the public report |
 | --- | --- | --- |
 | 0 | Available in underlying benchmark reports and in the normalized appendix aggregation | Defines the frictionless end of the ladder; not the headline deployment claim. |
 | 1 | Available in underlying benchmark reports and in the normalized appendix aggregation | Useful for sensitivity and collapse audits, but not the headline main-text setting. |
