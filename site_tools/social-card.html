@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1200, initial-scale=1">
+  <title>PEG-Bench social preview</title>
+  <style>
+    @font-face {
+      font-family: "Lato";
+      src: url("../docs/assets/fonts/Lato-Regular.ttf") format("truetype");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Lato";
+      src: url("../docs/assets/fonts/Lato-Bold.ttf") format("truetype");
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: "Lato";
+      src: url("../docs/assets/fonts/Lato-Heavy.ttf") format("truetype");
+      font-weight: 900;
+    }
+    * { box-sizing: border-box; }
+    html,
+    body {
+      width: 1200px;
+      height: 630px;
+      margin: 0;
+      overflow: hidden;
+      background: #F8F7F2;
+      color: #152536;
+      font-family: "Lato", sans-serif;
+    }
+    main {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 58px;
+      width: 100%;
+      height: 100%;
+      padding: 48px 58px 46px;
+      border-top: 12px solid #152536;
+    }
+    .copy {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .brand {
+      margin: 0;
+      color: #0B6E69;
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1;
+    }
+    h1 {
+      max-width: 540px;
+      margin: 76px 0 28px;
+      font-size: 59px;
+      font-weight: 900;
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    .thesis {
+      max-width: 490px;
+      margin: 0;
+      color: #5E6B76;
+      font-size: 23px;
+      line-height: 1.38;
+    }
+    .trace {
+      display: grid;
+      grid-template-rows: 1fr auto;
+      min-width: 0;
+      padding-top: 36px;
+    }
+    .rows {
+      display: grid;
+      align-content: center;
+      gap: 28px;
+      border-block: 1px solid #CDD9DF;
+    }
+    .row {
+      position: relative;
+      height: 34px;
+    }
+    .row::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 12px;
+      right: 12px;
+      height: 2px;
+      background: #CDD9DF;
+    }
+    .path {
+      position: absolute;
+      top: 14px;
+      left: 12px;
+      right: 12px;
+      height: 6px;
+      background: #5E6B76;
+    }
+    .changed .path {
+      background: #0B6E69;
+      clip-path: polygon(0 0, 43% 0, 54% 100%, 67% 0, 100% 0, 100% 100%, 67% 100%, 54% 100%, 43% 100%, 0 100%);
+    }
+    .origin,
+    .endpoint {
+      position: absolute;
+      top: 8px;
+      z-index: 2;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #5E6B76;
+    }
+    .origin { left: 3px; }
+    .endpoint { right: 3px; }
+    .changed .endpoint { background: #0B6E69; }
+    .negative::after {
+      content: "";
+      position: absolute;
+      top: 11px;
+      right: -18px;
+      width: 12px;
+      height: 12px;
+      background: #B8493C;
+    }
+    .result {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 28px 0 0;
+      padding-top: 22px;
+      border-top: 3px solid #152536;
+      color: #B8493C;
+      font-size: 21px;
+      font-weight: 700;
+    }
+    .result strong {
+      font-size: 43px;
+      font-weight: 900;
+      line-height: 1;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="copy">
+      <p class="brand">PEG-Bench</p>
+      <h1>When Prediction Leaderboards Can Fail</h1>
+      <p class="thesis">Prediction rankings can reverse after costs, turnover, and risk.</p>
+    </section>
+    <section class="trace">
+      <div class="rows" aria-hidden="true">
+        <div class="row negative"><span class="path"></span><span class="origin"></span><span class="endpoint"></span></div>
+        <div class="row changed"><span class="path"></span><span class="origin"></span><span class="endpoint"></span></div>
+        <div class="row changed negative"><span class="path"></span><span class="origin"></span><span class="endpoint"></span></div>
+        <div class="row changed"><span class="path"></span><span class="origin"></span><span class="endpoint"></span></div>
+        <div class="row negative"><span class="path"></span><span class="origin"></span><span class="endpoint"></span></div>
+        <div class="row changed"><span class="path"></span><span class="origin"></span><span class="endpoint"></span></div>
+      </div>
+      <p class="result"><strong>4 / 6</strong><span>leader identities change at 3 bps</span></p>
+    </section>
+  </main>
+</body>
+</html>

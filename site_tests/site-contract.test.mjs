@@ -151,4 +151,18 @@ test("ranking animation has the approved timing and a static fallback", () => {
   assert.match(js, /data_failed/);
 });
 
+test("metadata and error recovery match the anonymous poster identity", () => {
+  const html = read("docs/index.html");
+  const notFound = read("docs/404.html");
+  assert.match(html, /<title>When Prediction Leaderboards Can Fail \| PEG-Bench<\/title>/);
+  assert.match(html, /property="og:image" content="https:\/\/computational-decision-lab\.github\.io\/peg-bench\/assets\/peg-bench-social\.png"/);
+  assert.match(html, /"@type":\s*"ScholarlyArticle"/);
+  assert.doesNotMatch(html, /"author"|"affiliation"|"publisher"/i);
+  assert.match(notFound, /Return to PEG-Bench/);
+  assert.ok(exists("docs/assets/peg-bench-social.png"));
+  const png = readFileSync(resolve(root, "docs/assets/peg-bench-social.png"));
+  assert.equal(png.readUInt32BE(16), 1200);
+  assert.equal(png.readUInt32BE(20), 630);
+});
+
 export { exists, read, root };
