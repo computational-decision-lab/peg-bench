@@ -3,11 +3,77 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { runInNewContext } from "node:vm";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const read = (path) => readFileSync(resolve(root, path), "utf8");
 const exists = (path) => existsSync(resolve(root, path));
 const attributes = (html, name) => [...html.matchAll(new RegExp(`${name}=["']([^"']+)["']`, "g"))].map((match) => match[1]);
+
+function exerciseSiteScript(hash, { interaction, reduced = false } = {}) {
+  const callbacks = {};
+  const listeners = new Map();
+  const raf = [];
+  const scrollCalls = [];
+
+  const makeTarget = (name, tagName, heading = null) => ({
+    tagName,
+    querySelector: (selector) => selector === ".numbered-heading" ? heading : null,
+    scrollIntoView: (options) => scrollCalls.push({ name, block: options.block })
+  });
+  const problemHeading = makeTarget("problem-heading", "DIV");
+  const limitsHeading = makeTarget("limits-heading", "DIV");
+  const main = makeTarget("main", "MAIN", problemHeading);
+  const limits = makeTarget("limits", "SECTION", limitsHeading);
+  const stage = {
+    state: "fallback",
+    querySelector: (selector) => selector === ".motion-canvas" ? {} : null,
+    getAttribute: () => "./assets/peg-ranking-trace.json",
+    setAttribute: (name, value) => {
+      if (name === "data-motion-state") stage.state = value;
+    }
+  };
+  const animation = {
+    addEventListener: (name, callback) => { callbacks[name] = callback; },
+    destroy: () => {},
+    play: () => {}
+  };
+  const document = {
+    documentElement: { style: { scrollBehavior: "" } },
+    getElementById: (id) => ({ "ranking-motion": stage, main, limits })[id] || null,
+    querySelector: () => null
+  };
+  const window = {
+    location: { hash },
+    matchMedia: () => ({ matches: reduced }),
+    lottie: { loadAnimation: () => animation },
+    requestAnimationFrame: (callback) => raf.push(callback),
+    IntersectionObserver: function () {
+      this.observe = () => {};
+      this.disconnect = () => {};
+    },
+    addEventListener: (name, callback) => {
+      if (!listeners.has(name)) listeners.set(name, new Set());
+      listeners.get(name).add(callback);
+    },
+    removeEventListener: (name, callback) => listeners.get(name)?.delete(callback)
+  };
+  const dispatch = (name, event = {}) => {
+    for (const callback of listeners.get(name) || []) callback({ type: name, ...event });
+  };
+
+  runInNewContext(read("docs/site.js"), {
+    Date,
+    IntersectionObserver: window.IntersectionObserver,
+    decodeURIComponent,
+    document,
+    window
+  });
+  if (interaction) dispatch(interaction.type, interaction.event);
+  callbacks.DOMLoaded?.();
+  while (raf.length) raf.shift()();
+  return { scrollCalls, state: stage.state };
+}
 
 test("product and design contracts encode the approved direction", () => {
   const product = read("PRODUCT.md");
@@ -170,6 +236,26 @@ test("ranking animation has the approved timing and a static fallback", () => {
   assert.match(js, /data_failed/);
   assert.match(js, /restoreFragmentAfterLayoutChange/);
   assert.match(js, /scrollTarget\.scrollIntoView/);
+});
+
+test("fragment restoration preserves section and skip-link target intent", () => {
+  assert.deepEqual(exerciseSiteScript("#limits").scrollCalls, [{ name: "limits-heading", block: "start" }]);
+  assert.deepEqual(exerciseSiteScript("#main").scrollCalls, [{ name: "main", block: "start" }]);
+});
+
+test("fragment restoration yields to user navigation before delayed motion is ready", () => {
+  for (const interaction of [
+    { type: "wheel" },
+    { type: "pointerdown" },
+    { type: "keydown", event: { key: "PageDown" } }
+  ]) {
+    assert.deepEqual(exerciseSiteScript("#limits", { interaction }).scrollCalls, [], `${interaction.type} should cancel deferred restoration`);
+  }
+});
+
+test("reduced motion and malformed fragments never trigger restoration", () => {
+  assert.deepEqual(exerciseSiteScript("#limits", { reduced: true }), { scrollCalls: [], state: "fallback" });
+  assert.deepEqual(exerciseSiteScript("#%E0%A4%A"), { scrollCalls: [], state: "ready" });
 });
 
 test("metadata and error recovery match the anonymous poster identity", () => {

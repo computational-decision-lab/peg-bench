@@ -29,9 +29,35 @@
     path: stage.getAttribute("data-lottie-src")
   });
   var observer;
+  var fragmentRestoreCancelled = false;
+  var fragmentScrollKeys = ["ArrowDown", "ArrowUp", "PageDown", "PageUp", "Home", "End", " ", "Spacebar"];
+
+  function cancelFragmentRestore(event) {
+    if (event.type === "keydown" && fragmentScrollKeys.indexOf(event.key) === -1) return;
+    fragmentRestoreCancelled = true;
+  }
+
+  function allowFragmentRestore() {
+    fragmentRestoreCancelled = false;
+  }
+
+  function stopTrackingFragmentRestore() {
+    window.removeEventListener("wheel", cancelFragmentRestore);
+    window.removeEventListener("touchmove", cancelFragmentRestore);
+    window.removeEventListener("pointerdown", cancelFragmentRestore);
+    window.removeEventListener("keydown", cancelFragmentRestore);
+    window.removeEventListener("hashchange", allowFragmentRestore);
+  }
+
+  window.addEventListener("wheel", cancelFragmentRestore, { passive: true });
+  window.addEventListener("touchmove", cancelFragmentRestore, { passive: true });
+  window.addEventListener("pointerdown", cancelFragmentRestore);
+  window.addEventListener("keydown", cancelFragmentRestore);
+  window.addEventListener("hashchange", allowFragmentRestore);
 
   function restoreFragmentAfterLayoutChange() {
-    if (!window.location.hash) return;
+    stopTrackingFragmentRestore();
+    if (fragmentRestoreCancelled || !window.location.hash) return;
 
     var id;
     try {
@@ -42,7 +68,7 @@
 
     var target = document.getElementById(id);
     if (!target) return;
-    var scrollTarget = target.querySelector(".numbered-heading") || target;
+    var scrollTarget = target.tagName === "SECTION" ? target.querySelector(".numbered-heading") || target : target;
 
     window.requestAnimationFrame(function () {
       var root = document.documentElement;
@@ -54,6 +80,7 @@
   }
 
   function restoreFallback() {
+    stopTrackingFragmentRestore();
     stage.setAttribute("data-motion-state", "fallback");
     if (observer) observer.disconnect();
     animation.destroy();
