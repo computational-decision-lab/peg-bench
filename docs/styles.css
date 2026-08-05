@@ -441,7 +441,7 @@ figcaption strong {
 }
 
 .reader-map a span {
-  color: var(--brick);
+  color: var(--teal);
   font-family: var(--mono);
   font-size: 10px;
 }
@@ -588,7 +588,7 @@ figcaption strong {
 }
 
 .numbered-heading-light > span {
-  color: var(--brick);
+  color: var(--teal);
 }
 
 .concept-flow {
@@ -602,7 +602,7 @@ figcaption strong {
 }
 
 .concept-index {
-  color: var(--brick);
+  color: var(--teal);
   font-family: var(--mono);
   font-size: 12px;
   font-weight: 700;
@@ -1060,7 +1060,7 @@ figcaption strong {
 
 .transfer-disclosure {
   margin: 28px 0 38px calc((100% + 24px) / 12);
-  color: var(--brick);
+  color: var(--ink);
   font-size: 14px;
   font-weight: 700;
 }
@@ -1224,6 +1224,10 @@ figcaption strong {
   margin-bottom: 15px;
   color: var(--grey);
   font-size: 16px;
+}
+
+.boundary-band .text-link {
+  color: var(--teal);
 }
 
 .site-footer {

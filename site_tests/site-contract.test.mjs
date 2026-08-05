@@ -100,4 +100,39 @@ test("CSS implements the poster system and mobile reading contract", () => {
   assert.doesNotMatch(css, /linear-gradient|radial-gradient|backdrop-filter/i);
 });
 
+test("404 page uses the current responsive navigation and button classes", () => {
+  const html = read("docs/404.html");
+  assert.match(html, /class="nav-primary"/);
+  assert.match(html, /class="nav-paper"/);
+  assert.match(html, /class="button button-primary"/);
+  assert.doesNotMatch(html, /\b(?:nav-links|nav-button|button-dark)\b/);
+});
+
+test("small text on soft bands uses an AA poster color", () => {
+  const css = read("docs/styles.css");
+  const selectors = [
+    ".reader-map a span",
+    ".numbered-heading-light > span",
+    ".concept-index",
+    ".transfer-disclosure",
+    ".boundary-band .text-link"
+  ];
+  for (const selector of selectors) {
+    const escaped = selector.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const rule = css.match(new RegExp(`${escaped}\\s*\\{[^}]*\\}`))?.[0];
+    assert.ok(rule, `missing CSS rule for ${selector}`);
+    assert.match(rule, /color:\s*var\(--(?:ink|teal)\)/, `${selector} is not AA on --soft`);
+  }
+});
+
+test("table wrappers do not advertise obsolete scrolling", () => {
+  const html = read("docs/index.html");
+  for (const className of ["design-table-wrap", "mechanism-table-wrap", "result-table-wrap", "limits-table-wrap"]) {
+    const wrapper = html.match(new RegExp(`<div class="${className}"[^>]*>`))?.[0];
+    assert.ok(wrapper, `missing ${className}`);
+    assert.doesNotMatch(wrapper, /\btabindex=/, `${className} is unnecessarily focusable`);
+    assert.doesNotMatch(wrapper, /\baria-label=/, `${className} advertises obsolete scrolling`);
+  }
+});
+
 export { exists, read, root };
