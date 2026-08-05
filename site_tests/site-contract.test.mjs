@@ -26,4 +26,20 @@ test("product and design contracts encode the approved direction", () => {
   assert.match(design, /static SVG fallback/i);
 });
 
+test("poster assets and self-hosted fonts are present and identity safe", () => {
+  const required = [
+    "docs/assets/peg-evaluation-chain.svg",
+    "docs/assets/peg-ranking-shift.svg",
+    "docs/assets/fonts/Lato-Regular.ttf",
+    "docs/assets/fonts/Lato-Bold.ttf",
+    "docs/assets/fonts/Lato-Heavy.ttf",
+    "docs/assets/fonts/OFL.txt"
+  ];
+  required.forEach((path) => assert.ok(exists(path), `missing ${path}`));
+  const identityPattern = /Ke Wang|Yangyang Liang|Xiaorui Tang|Georgia Tech|Guangdong University|Hong Kong University|HKUST|KDD|MLF 2026|NeurIPS/i;
+  for (const path of ["docs/assets/peg-evaluation-chain.svg", "docs/assets/peg-ranking-shift.svg"]) {
+    assert.doesNotMatch(read(path), identityPattern, `${path} contains excluded identity text`);
+  }
+});
+
 export { exists, read, root };
