@@ -30,6 +30,29 @@
   });
   var observer;
 
+  function restoreFragmentAfterLayoutChange() {
+    if (!window.location.hash) return;
+
+    var id;
+    try {
+      id = decodeURIComponent(window.location.hash.slice(1));
+    } catch (error) {
+      return;
+    }
+
+    var target = document.getElementById(id);
+    if (!target) return;
+    var scrollTarget = target.querySelector(".numbered-heading") || target;
+
+    window.requestAnimationFrame(function () {
+      var root = document.documentElement;
+      var previousScrollBehavior = root.style.scrollBehavior;
+      root.style.scrollBehavior = "auto";
+      scrollTarget.scrollIntoView({ block: "start" });
+      root.style.scrollBehavior = previousScrollBehavior;
+    });
+  }
+
   function restoreFallback() {
     stage.setAttribute("data-motion-state", "fallback");
     if (observer) observer.disconnect();
@@ -40,6 +63,7 @@
   animation.addEventListener("error", restoreFallback);
   animation.addEventListener("DOMLoaded", function () {
     stage.setAttribute("data-motion-state", "ready");
+    restoreFragmentAfterLayoutChange();
 
     if (!("IntersectionObserver" in window)) {
       animation.play();

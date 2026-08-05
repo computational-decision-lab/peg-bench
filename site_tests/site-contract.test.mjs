@@ -76,6 +76,17 @@ test("application scenarios are useful but never presented as evidence", () => {
   }
 });
 
+test("limitations consolidate every required scientific boundary", () => {
+  const html = read("docs/index.html");
+  const limits = html.slice(html.indexOf('id="limits"'), html.indexOf('id="engineering"'));
+  for (const boundary of ["90-day evaluation window", "Confidence-interval uncertainty", "Clean-active eligibility", "Evaluation, not deployment"]) {
+    assert.ok(limits.includes(boundary), `limitations section is missing ${boundary}`);
+  }
+  assert.match(limits, /day-block 95% confidence interval/i);
+  assert.match(limits, /zero-action safety-floor rows and non-active anchors/i);
+  assert.match(limits, /ranking-identity and evidence-boundary result/i);
+});
+
 test("deployed page omits excluded identity and venue text", () => {
   const html = read("docs/index.html");
   const excluded = /Ke Wang|Yangyang Liang|Xiaorui Tang|Georgia Tech|Guangdong University|Hong Kong University|HKUST|KDD|MLF 2026|NeurIPS/i;
@@ -157,6 +168,8 @@ test("ranking animation has the approved timing and a static fallback", () => {
   assert.match(js, /prefers-reduced-motion/);
   assert.match(js, /loop:\s*false/);
   assert.match(js, /data_failed/);
+  assert.match(js, /restoreFragmentAfterLayoutChange/);
+  assert.match(js, /scrollTarget\.scrollIntoView/);
 });
 
 test("metadata and error recovery match the anonymous poster identity", () => {
@@ -167,6 +180,7 @@ test("metadata and error recovery match the anonymous poster identity", () => {
   assert.match(html, /"@type":\s*"ScholarlyArticle"/);
   assert.doesNotMatch(html, /"author"|"affiliation"|"publisher"/i);
   assert.match(notFound, /Return to PEG-Bench/);
+  assert.match(notFound, /href="https:\/\/github\.com\/computational-decision-lab\/peg-bench" target="_blank" rel="noreferrer"/);
   assert.ok(exists("docs/assets/peg-bench-social.png"));
   const png = readFileSync(resolve(root, "docs/assets/peg-bench-social.png"));
   assert.equal(png.readUInt32BE(16), 1200);

@@ -279,10 +279,13 @@
           <caption>Scope limits that qualify the main conclusion</caption>
           <thead><tr><th scope="col">Limit</th><th scope="col">Consequence</th><th scope="col">Correct reading</th></tr></thead>
           <tbody>
+            <tr><th scope="row">90-day evaluation window</th><td data-label="Consequence">Headline comparisons use one frozen 90-day window.</td><td data-label="Correct reading">Persistence beyond this period and market regime remains untested.</td></tr>
             <tr><th scope="row">Licensed market data</th><td data-label="Consequence">Raw L2 feeds and reconstructable tensors are not redistributed.</td><td data-label="Correct reading">Inspect normalized evidence and evaluator code; do not infer raw-data access.</td></tr>
             <tr><th scope="row">Six populated panels</th><td data-label="Consequence">The result is a completed evidence slice, not a universal market claim.</td><td data-label="Correct reading">Read the conclusion within the fixed dates, assets, venues, views, and horizons.</td></tr>
+            <tr><th scope="row">Confidence-interval uncertainty</th><td data-label="Consequence">Every positive R4 point estimate has a day-block 95% confidence interval that crosses zero.</td><td data-label="Correct reading">The finding is a ranking-identity and evidence-boundary result, not statistically secure positive utility.</td></tr>
+            <tr><th scope="row">Clean-active eligibility</th><td data-label="Consequence">Clean-active selection excludes zero-action safety-floor rows and non-active anchors.</td><td data-label="Correct reading">Compare identities only within this eligible active-method universe; keep official RR@1 separate.</td></tr>
             <tr><th scope="row">Incomplete method panel</th><td data-label="Consequence">Several target families have no normalized 90-day result rows.</td><td data-label="Correct reading">Target-only methods are explicitly not claimed as completed baselines.</td></tr>
-            <tr><th scope="row">Approximate frictions</th><td data-label="Consequence">The replay evaluator is execution-aware but is not a production simulator.</td><td data-label="Correct reading">Use it to audit evaluation conclusions, not to promise deployable returns.</td></tr>
+            <tr><th scope="row">Evaluation, not deployment</th><td data-label="Consequence">Approximate frictions and frozen replay do not reproduce production operations.</td><td data-label="Correct reading">Use the benchmark to audit evaluation conclusions, not to claim deployable returns or readiness.</td></tr>
             <tr><th scope="row">RR@1 diagnostic</th><td data-label="Consequence">RR@1=1.0 uses k=1 and deterministic stable sorting in the official universe.</td><td data-label="Correct reading">Keep it separate from the clean-active R4 identity result.</td></tr>
           </tbody>
         </table>
