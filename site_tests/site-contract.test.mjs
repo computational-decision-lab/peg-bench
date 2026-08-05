@@ -39,7 +39,11 @@ test("poster assets and self-hosted fonts are present and identity safe", () => 
   required.forEach((path) => assert.ok(exists(path), `missing ${path}`));
   const identityPattern = /Ke Wang|Yangyang Liang|Xiaorui Tang|Georgia Tech|Guangdong University|Hong Kong University|HKUST|KDD|MLF 2026|NeurIPS/i;
   for (const path of ["docs/assets/peg-evaluation-chain.svg", "docs/assets/peg-ranking-shift.svg"]) {
-    assert.doesNotMatch(read(path), identityPattern, `${path} contains excluded identity text`);
+    const svg = read(path);
+    assert.doesNotMatch(svg, identityPattern, `${path} contains excluded identity text`);
+    assert.doesNotMatch(svg, /<(?:script|foreignObject)\b/i, `${path} contains executable or embedded content`);
+    assert.doesNotMatch(svg, /\son[a-z]+\s*=/i, `${path} contains an event-handler attribute`);
+    assert.doesNotMatch(svg, /(?:href|xlink:href)\s*=\s*["'](?:https?:|\/\/)/i, `${path} contains an external reference`);
   }
 });
 
@@ -60,11 +64,15 @@ test("page follows the approved eight-part narrative", () => {
 test("application scenarios are useful but never presented as evidence", () => {
   const html = read("docs/index.html");
   assert.match(html, /Illustrative transfer scenarios\. These domains were not evaluated in the released benchmark\./);
-  for (const domain of ["AI coding", "Finance", "Healthcare", "Cybersecurity", "Energy and industrial control"]) {
-    assert.ok(html.includes(domain), `missing ${domain}`);
-  }
-  for (const field of ["Prediction", "Action", "Realized utility", "Failure cost"]) {
-    assert.ok(html.includes(field), `missing application field ${field}`);
+  const engineering = html.slice(html.indexOf('id="engineering"'), html.indexOf('id="materials"'));
+  const rows = [...engineering.matchAll(/<article class="application-row">([\s\S]*?)<\/article>/g)].map((match) => match[1]);
+  const domains = ["AI coding", "Finance", "Healthcare", "Cybersecurity", "Energy and industrial control"];
+  const fields = ["Prediction", "Action", "Realized utility", "Failure cost"];
+  assert.equal(rows.length, domains.length, "application matrix must contain exactly five scenarios");
+  for (const [index, row] of rows.entries()) {
+    assert.match(row, new RegExp(`<h3>${domains[index]}</h3>`), `application row ${index + 1} has the wrong domain`);
+    const rowFields = [...row.matchAll(/<dt>([^<]+)<\/dt>/g)].map((match) => match[1]);
+    assert.deepEqual(rowFields, fields, `${domains[index]} must use the complete ordered evidence structure`);
   }
 });
 
