@@ -19,6 +19,10 @@ test("product and design contracts encode the approved direction", () => {
   assert.match(design, /320x568/);
   assert.match(design, /1440x900/);
   assert.match(design, /Lato/);
+  assert.match(design, /960x360/);
+  assert.match(design, /ip:\s*0/);
+  assert.match(design, /op:\s*72/);
+  assert.match(design, /frames 0-71/);
   assert.match(design, /static SVG fallback/i);
 });
 

@@ -60,7 +60,7 @@ Below 720px, tables transform into readable stacked records rather than miniatur
 
 ## Motion
 
-Motion explains evidence and hierarchy; it never decorates empty space. The only evidence animation is a transparent Lottie scene for the poster-derived R0-to-R4 leader trace: 30 fps, 2.4 seconds, and no loop. It reveals six neutral R0 origins, draws staged ease-out connectors, resolves unchanged paths in grey and changed paths in teal, then reveals `4 / 6 changed` in brick. Do not animate numerical values, confidence intervals, or scientific labels into misleading intermediate states.
+Motion explains evidence and hierarchy; it never decorates empty space. The only evidence animation is a transparent Lottie scene for the poster-derived R0-to-R4 leader trace: a 960x360 canvas, 30 fps, 2.4 seconds, exact frame bounds `ip: 0`, `op: 72` (frames 0-71), and no loop. It reveals six neutral R0 origins, draws staged ease-out connectors, resolves unchanged paths in grey and changed paths in teal, then reveals `4 / 6 changed` in brick. Do not animate numerical values, confidence intervals, or scientific labels into misleading intermediate states.
 
 The animation runs once when substantially visible. A static SVG fallback with identical final-state information is present in the markup before the player loads and remains available when JavaScript, the runtime, or motion is unavailable. Under `prefers-reduced-motion: reduce`, disable orchestration and Lottie playback and display the static final state.
 
