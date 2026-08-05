@@ -87,4 +87,17 @@ test("all local page references resolve and all fragment links have targets", ()
   }
 });
 
+test("CSS implements the poster system and mobile reading contract", () => {
+  const css = read("docs/styles.css");
+  for (const token of ["#F8F7F2", "#152536", "#0B6E69", "#B8493C", "#5E6B76", "#CDD9DF", "#ECEEEA"]) {
+    assert.ok(css.includes(token), `missing CSS color ${token}`);
+  }
+  assert.match(css, /@font-face[\s\S]*Lato-Regular\.ttf/);
+  assert.match(css, /@media \(max-width: 720px\)/);
+  assert.match(css, /td::before[\s\S]*attr\(data-label\)/);
+  assert.match(css, /@media \(prefers-reduced-motion: reduce\)/);
+  assert.match(css, /min-height:\s*44px/);
+  assert.doesNotMatch(css, /linear-gradient|radial-gradient|backdrop-filter/i);
+});
+
 export { exists, read, root };
