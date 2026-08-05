@@ -763,7 +763,7 @@ Review the scene against the text-to-lottie checks: reading-order reveal, calm r
 
 ```bash
 node --test site_tests/site-contract.test.mjs
-python -m unittest discover -s tests -v
+python3 -m unittest discover -s tests -v
 git status --short
 ```
 
@@ -806,7 +806,7 @@ Expected: every listed file reports `OK`.
 
 ```bash
 node --test site_tests/site-contract.test.mjs
-python -m unittest discover -s tests -v
+python3 -m unittest discover -s tests -v
 git status --short
 git log --oneline -8
 ```
