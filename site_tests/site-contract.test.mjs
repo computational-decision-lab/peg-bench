@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const read = (path) => readFileSync(resolve(root, path), "utf8");
 const exists = (path) => existsSync(resolve(root, path));
+const attributes = (html, name) => [...html.matchAll(new RegExp(`${name}=["']([^"']+)["']`, "g"))].map((match) => match[1]);
 
 test("product and design contracts encode the approved direction", () => {
   const product = read("PRODUCT.md");
@@ -39,6 +40,50 @@ test("poster assets and self-hosted fonts are present and identity safe", () => 
   const identityPattern = /Ke Wang|Yangyang Liang|Xiaorui Tang|Georgia Tech|Guangdong University|Hong Kong University|HKUST|KDD|MLF 2026|NeurIPS/i;
   for (const path of ["docs/assets/peg-evaluation-chain.svg", "docs/assets/peg-ranking-shift.svg"]) {
     assert.doesNotMatch(read(path), identityPattern, `${path} contains excluded identity text`);
+  }
+});
+
+test("page follows the approved eight-part narrative", () => {
+  const html = read("docs/index.html");
+  const ids = ["problem", "concept", "design", "mechanism", "results", "limits", "engineering", "materials"];
+  let cursor = -1;
+  for (const id of ids) {
+    const next = html.indexOf(`id="${id}"`);
+    assert.ok(next > cursor, `${id} is missing or out of order`);
+    cursor = next;
+  }
+  assert.match(html, /When Prediction Leaderboards Can Fail/);
+  assert.match(html, /Prediction rankings can reverse after costs, turnover, and risk\./);
+  assert.match(html, /4 of 6 active leader identities change at 3 bps/);
+});
+
+test("application scenarios are useful but never presented as evidence", () => {
+  const html = read("docs/index.html");
+  assert.match(html, /Illustrative transfer scenarios\. These domains were not evaluated in the released benchmark\./);
+  for (const domain of ["AI coding", "Finance", "Healthcare", "Cybersecurity", "Energy and industrial control"]) {
+    assert.ok(html.includes(domain), `missing ${domain}`);
+  }
+  for (const field of ["Prediction", "Action", "Realized utility", "Failure cost"]) {
+    assert.ok(html.includes(field), `missing application field ${field}`);
+  }
+});
+
+test("deployed page omits excluded identity and venue text", () => {
+  const html = read("docs/index.html");
+  const excluded = /Ke Wang|Yangyang Liang|Xiaorui Tang|Georgia Tech|Guangdong University|Hong Kong University|HKUST|KDD|MLF 2026|NeurIPS/i;
+  assert.doesNotMatch(html, excluded);
+  assert.doesNotMatch(html, /Public technical report \/ research benchmark/i);
+});
+
+test("all local page references resolve and all fragment links have targets", () => {
+  const html = read("docs/index.html");
+  const ids = new Set(attributes(html, "id"));
+  for (const href of attributes(html, "href")) {
+    if (href.startsWith("#")) assert.ok(ids.has(href.slice(1)), `missing anchor ${href}`);
+    if (href.startsWith("./")) assert.ok(exists(`docs/${href.slice(2)}`), `missing local href ${href}`);
+  }
+  for (const src of attributes(html, "src")) {
+    if (src.startsWith("./")) assert.ok(exists(`docs/${src.slice(2)}`), `missing local src ${src}`);
   }
 });
 
