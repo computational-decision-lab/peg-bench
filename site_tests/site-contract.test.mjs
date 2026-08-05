@@ -99,6 +99,8 @@ test("product and design contracts encode the approved direction", () => {
 
 test("poster assets and self-hosted fonts are present and identity safe", () => {
   const required = [
+    "docs/assets/peg-bench-paper.pdf",
+    "docs/assets/peg-bench-technical-report.pdf",
     "docs/assets/peg-evaluation-chain.svg",
     "docs/assets/peg-ranking-shift.svg",
     "docs/assets/fonts/Lato-Regular.ttf",
@@ -107,6 +109,10 @@ test("poster assets and self-hosted fonts are present and identity safe", () => 
     "docs/assets/fonts/OFL.txt"
   ];
   required.forEach((path) => assert.ok(exists(path), `missing ${path}`));
+  const checksums = read("docs/assets/site-checksums.sha256");
+  for (const path of required.slice(0, 2)) {
+    assert.match(checksums, new RegExp(`  ${path.replaceAll(".", "\\.")}$`, "m"), `${path} is not integrity tracked`);
+  }
   const identityPattern = /Ke Wang|Yangyang Liang|Xiaorui Tang|Georgia Tech|Guangdong University|Hong Kong University|HKUST|KDD|MLF 2026|NeurIPS/i;
   for (const path of ["docs/assets/peg-evaluation-chain.svg", "docs/assets/peg-ranking-shift.svg"]) {
     const svg = read(path);
