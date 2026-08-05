@@ -10,7 +10,7 @@ const read = (path) => readFileSync(resolve(root, path), "utf8");
 const exists = (path) => existsSync(resolve(root, path));
 const attributes = (html, name) => [...html.matchAll(new RegExp(`${name}=["']([^"']+)["']`, "g"))].map((match) => match[1]);
 
-function exerciseSiteScript(hash, { interaction, reduced = false } = {}) {
+function exerciseSiteScript(hash, { interaction, interactions = [], reduced = false } = {}) {
   const callbacks = {};
   const listeners = new Map();
   const raf = [];
@@ -69,7 +69,11 @@ function exerciseSiteScript(hash, { interaction, reduced = false } = {}) {
     document,
     window
   });
-  if (interaction) dispatch(interaction.type, interaction.event);
+  const eventSequence = interactions.length ? interactions : interaction ? [interaction] : [];
+  for (const current of eventSequence) {
+    if (current.hash) window.location.hash = current.hash;
+    dispatch(current.type, current.event);
+  }
   callbacks.DOMLoaded?.();
   while (raf.length) raf.shift()();
   return { scrollCalls, state: stage.state };
@@ -246,11 +250,22 @@ test("fragment restoration preserves section and skip-link target intent", () =>
 test("fragment restoration yields to user navigation before delayed motion is ready", () => {
   for (const interaction of [
     { type: "wheel" },
+    { type: "touchmove" },
     { type: "pointerdown" },
     { type: "keydown", event: { key: "PageDown" } }
   ]) {
     assert.deepEqual(exerciseSiteScript("#limits", { interaction }).scrollCalls, [], `${interaction.type} should cancel deferred restoration`);
   }
+});
+
+test("a new fragment choice re-enables restoration after earlier user navigation", () => {
+  const result = exerciseSiteScript("#main", {
+    interactions: [
+      { type: "wheel" },
+      { type: "hashchange", hash: "#limits" }
+    ]
+  });
+  assert.deepEqual(result.scrollCalls, [{ name: "limits-heading", block: "start" }]);
 });
 
 test("reduced motion and malformed fragments never trigger restoration", () => {
