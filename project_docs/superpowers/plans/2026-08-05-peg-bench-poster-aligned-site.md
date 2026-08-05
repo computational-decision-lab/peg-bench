@@ -587,8 +587,8 @@ node --test site_tests/site-contract.test.mjs
 node -e "JSON.parse(require('fs').readFileSync('docs/assets/peg-ranking-trace.json','utf8'))"
 python3 -m http.server 4173 --directory docs >/tmp/peg-site-server.log 2>&1 &
 PEG_SITE_PID=$!
-npx playwright screenshot --full-page --viewport-size=390,844 http://127.0.0.1:4173/#results /tmp/peg-motion-mobile.png
-npx playwright screenshot --full-page --viewport-size=1280,800 http://127.0.0.1:4173/#results /tmp/peg-motion-desktop.png
+npx playwright screenshot --viewport-size=390,844 http://127.0.0.1:4173/#results /tmp/peg-motion-mobile.png
+npx playwright screenshot --viewport-size=1280,800 http://127.0.0.1:4173/#results /tmp/peg-motion-desktop.png
 kill "$PEG_SITE_PID"
 git diff --check
 ```
@@ -824,8 +824,8 @@ git push origin main
 - [ ] **Step 4: Watch the Pages workflow to completion**
 
 ```bash
-gh run list --repo computational-decision-lab/peg-bench --workflow pages.yml --limit 1
-gh run watch --repo computational-decision-lab/peg-bench --exit-status
+PEG_PAGES_RUN_ID=$(gh run list --repo computational-decision-lab/peg-bench --workflow pages.yml --limit 1 --json databaseId --jq '.[0].databaseId')
+gh run watch "$PEG_PAGES_RUN_ID" --repo computational-decision-lab/peg-bench --exit-status
 ```
 
 Expected: the newest `Deploy research site` workflow completes successfully.
