@@ -135,4 +135,20 @@ test("table wrappers do not advertise obsolete scrolling", () => {
   }
 });
 
+test("ranking animation has the approved timing and a static fallback", () => {
+  const html = read("docs/index.html");
+  const js = read("docs/site.js");
+  assert.ok(exists("docs/assets/peg-ranking-trace.json"));
+  assert.ok(exists("docs/assets/vendor/lottie-light.min.js"));
+  const motion = JSON.parse(read("docs/assets/peg-ranking-trace.json"));
+  assert.deepEqual({ fr: motion.fr, ip: motion.ip, op: motion.op, w: motion.w, h: motion.h }, { fr: 30, ip: 0, op: 72, w: 960, h: 360 });
+  assert.ok(motion.layers.length >= 12, "expected paths and endpoints for six evidence rows");
+  assert.match(html, /id="ranking-motion"/);
+  assert.match(html, /class="motion-fallback"[\s\S]*peg-ranking-shift\.svg/);
+  assert.match(html, /data-lottie-src="\.\/assets\/peg-ranking-trace\.json"/);
+  assert.match(js, /prefers-reduced-motion/);
+  assert.match(js, /loop:\s*false/);
+  assert.match(js, /data_failed/);
+});
+
 export { exists, read, root };

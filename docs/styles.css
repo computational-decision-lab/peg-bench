@@ -880,19 +880,41 @@ figcaption strong {
   line-height: 1.45;
 }
 
-.ranking-shift-figure {
+.ranking-figure {
   margin: 0 0 42px calc((100% + 24px) / 12);
 }
 
-.ranking-shift-figure img {
+.motion-stage,
+.ranking-figure figcaption {
   width: min(100%, 880px);
+}
+
+.motion-fallback {
+  display: block;
+  width: 100%;
   height: auto;
   aspect-ratio: 2500 / 2475;
   object-fit: contain;
 }
 
-.ranking-shift-figure figcaption {
-  width: min(100%, 880px);
+.motion-canvas {
+  display: none;
+  width: 100%;
+  aspect-ratio: 8 / 3;
+}
+
+.motion-canvas svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.motion-stage[data-motion-state="ready"] .motion-fallback {
+  display: none;
+}
+
+.motion-stage[data-motion-state="ready"] .motion-canvas {
+  display: block;
 }
 
 .result-table th,
@@ -1348,7 +1370,7 @@ figcaption strong {
   .inline-links,
   .mechanism-example,
   .evidence-legend,
-  .ranking-shift-figure,
+  .ranking-figure,
   .table-note,
   .figure-grid,
   .protocol-caveat,
@@ -1809,7 +1831,7 @@ figcaption strong {
     padding: 14px 0;
   }
 
-  .ranking-shift-figure {
+  .ranking-figure {
     margin-bottom: 34px;
   }
 
@@ -1939,6 +1961,14 @@ figcaption strong {
     transition-duration: .01ms !important;
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .motion-stage[data-motion-state="ready"] .motion-fallback {
+    display: block;
+  }
+
+  .motion-stage[data-motion-state="ready"] .motion-canvas {
+    display: none;
   }
 }
 

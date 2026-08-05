@@ -225,9 +225,12 @@
         <article><p class="evidence-label diagnostic">Diagnostic</p><p>Wrapper and formal-method rows inform sensitivity but do not replace the clean ranked leaderboard.</p></article>
         <article><p class="evidence-label target">Target only</p><p>Method families without normalized 90-day evidence under the shared evaluator.</p></article>
       </div>
-      <figure class="ranking-shift-figure">
-        <img src="./assets/peg-ranking-shift.svg" width="2400" height="3200" loading="lazy" alt="Six-panel ranking shift showing four clean-active leader identities changing between R0 prediction ranking and R4 execution-aware evaluation">
-        <figcaption><strong>Four of six leader identities change.</strong><span>R4 values are point estimates at 3 bps; uncertainty remains visible in the table below.</span></figcaption>
+      <figure class="ranking-figure" aria-labelledby="ranking-caption">
+        <div id="ranking-motion" class="motion-stage" data-lottie-src="./assets/peg-ranking-trace.json" data-motion-state="fallback">
+          <img class="motion-fallback" src="./assets/peg-ranking-shift.svg" width="2500" height="2475" loading="lazy" alt="Six-panel comparison showing four active leader identity changes after 3 bps accounting">
+          <div class="motion-canvas" aria-hidden="true"></div>
+        </div>
+        <figcaption id="ranking-caption"><strong>Four of six active selections change identity.</strong> LightGBM leads all R0 panels; Kairos-64 leads four clean-active R4 panels at 3 bps.</figcaption>
       </figure>
       <div class="result-table-wrap">
         <table class="result-table">
@@ -390,6 +393,7 @@
       <p class="footer-meta">Public research release <span aria-hidden="true">&middot;</span> Evidence, provenance, and limits are linked above <span aria-hidden="true">&middot;</span> <span id="year">2026</span></p>
     </div>
   </footer>
+  <script src="./assets/vendor/lottie-light.min.js" defer></script>
   <script src="./site.js" defer></script>
 </body>
 </html>
