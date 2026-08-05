@@ -8,6 +8,10 @@ brand
 
 Researchers, reviewers, and practitioners evaluating sequential decision systems. They arrive from a paper citation or GitHub link and need to understand the benchmark thesis quickly, inspect the evidence, download the paper, and find the public-safe artifact boundary.
 
+## Primary Entry
+
+A visitor scans the poster QR code on a phone and needs the thesis, decisive result, evidence boundary, paper, and GitHub route within the first reading sequence.
+
 ## Product Purpose
 
 The PEG-Bench research site is the public front door for the Prediction--Execution Gap Benchmark. It explains why an offline prediction leaderboard is not necessarily a deployment leaderboard, makes the six-panel evidence legible, and routes visitors to the paper, evaluator code, normalized evidence, and reproduction scripts.
@@ -27,6 +31,10 @@ Avoid generic SaaS dashboards, decorative AI gradients, oversized marketing clai
 3. Use the actual paper evidence as the visual language.
 4. Separate completed evidence, diagnostics, and release boundaries.
 5. Keep every path to the paper, artifact, and source code one click away.
+
+## Transfer Disclosure
+
+Illustrative transfer scenarios. These domains were not evaluated in the released benchmark.
 
 ## Accessibility & Inclusion
 
