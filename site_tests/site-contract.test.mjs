@@ -102,7 +102,6 @@ test("poster assets and self-hosted fonts are present and identity safe", () => 
   const required = [
     "docs/assets/peg-bench-paper.pdf",
     "docs/assets/peg-bench-technical-report.pdf",
-    "docs/assets/peg-evaluation-chain.svg",
     "docs/assets/peg-ranking-shift.svg",
     "docs/assets/fonts/Lato-Regular.ttf",
     "docs/assets/fonts/Lato-Bold.ttf",
@@ -115,7 +114,7 @@ test("poster assets and self-hosted fonts are present and identity safe", () => 
     assert.match(checksums, new RegExp(`  ${path.replaceAll(".", "\\.")}$`, "m"), `${path} is not integrity tracked`);
   }
   const identityPattern = /Ke Wang|Yangyang Liang|Xiaorui Tang|Georgia Tech|Guangdong University|Hong Kong University|HKUST|KDD|MLF 2026|NeurIPS/i;
-  for (const path of ["docs/assets/peg-evaluation-chain.svg", "docs/assets/peg-ranking-shift.svg"]) {
+  for (const path of ["docs/assets/peg-ranking-shift.svg"]) {
     const svg = read(path);
     assert.doesNotMatch(svg, identityPattern, `${path} contains excluded identity text`);
     assert.doesNotMatch(svg, /<(?:script|foreignObject)\b/i, `${path} contains executable or embedded content`);
@@ -326,6 +325,30 @@ test("controlled contract figure is unique, public-safe, and mobile-adapted", ()
   assert.doesNotMatch(html, /class="ladder-inline"/);
   assert.match(css, /@media \(max-width: 767px\)[\s\S]*\.contract-figure[\s\S]*display:\s*none/);
   assert.match(design, /controlled diagnostic contract/i);
+});
+
+test("hero visual uses the readable landscape evidence summary", () => {
+  const html = read("docs/index.html");
+  const css = read("docs/styles.css");
+  const hero = html.slice(html.indexOf('<section id="top"'), html.indexOf('<section class="reader-map"'));
+
+  assert.ok(exists("docs/assets/peg-bench-social.png"));
+  assert.match(hero, /<img src="\.\/assets\/winner-shift\.png" width="1567" height="694"/);
+  assert.doesNotMatch(hero, /peg-evaluation-chain\.svg/);
+  assert.match(hero, /visual abstract|visual summary/i);
+  assert.equal((html.match(/<img[^>]+winner-shift\.png/g) || []).length, 1, "leader-shift evidence must not be repeated as another visible figure");
+  assert.match(css, /\.hero-evidence img\s*\{[^}]*aspect-ratio:\s*1567\s*\/\s*694/);
+  assert.match(css, /\.hero-evidence\s*\{[^}]*max-width:\s*560px/);
+});
+
+test("typography scale is intentionally legible across the research narrative", () => {
+  const css = read("docs/styles.css");
+  assert.match(css, /body\s*\{[^}]*font-size:\s*18px/);
+  assert.match(css, /\.hero h1\s*\{[^}]*font-size:\s*68px/);
+  assert.match(css, /\.numbered-heading h2\s*\{[^}]*font-size:\s*50px/);
+  assert.match(css, /\.nav-primary a,[\s\S]*?font-size:\s*14px/);
+  assert.match(css, /@media \(max-width: 720px\)[\s\S]*\.hero h1\s*\{[^}]*font-size:\s*42px/);
+  assert.match(css, /@media \(max-width: 720px\)[\s\S]*body\s*\{[^}]*font-size:\s*17px/);
 });
 
 export { exists, read, root };

@@ -23,8 +23,9 @@ Teal and brick are semantic colors, not competing decoration.
 
 Self-host Lato in the weights needed for body, headings, and numerical emphasis, matching the poster and avoiding a third-party font request. Use a system monospace stack only for protocol labels, compact values, and file paths.
 
-- Desktop body: 17px with 1.65 line height.
+- Desktop body: 18px with 1.65 line height.
 - Mobile body: 17px with 1.65 line height.
+- Hero display: 68px on wide desktop, 58px at the intermediate breakpoint, and 42px on mobile; section titles step down discretely from 50px to 36px.
 - Prose measure: 58ch to 68ch.
 - Use discrete breakpoint sizes, never viewport-width font scaling.
 - Headlines are sentence case with zero letter spacing. Uppercase is reserved for short protocol labels.
@@ -52,7 +53,7 @@ Show this map once near the beginning as an unframed horizontal index on desktop
 
 Use a sticky desktop navigation with the PEG-Bench wordmark, `Problem`, `Design`, `Evidence`, `Limits`, `Materials`, and one primary `Paper` action. Mobile uses a compact sticky bar with the wordmark, `Paper`, and a native disclosure menu. All targets are at least 44 by 44 CSS pixels, and anchored sections account for the sticky-header offset.
 
-The hero is the scan landing state: it contains the project marker, the thesis, one decisive result, a paper or evidence action, and a visible hint of the next section. Preserve stable aspect ratios for evidence graphics. Use mobile-specific evidence compositions rather than scaled-down desktop canvases, and do not allow horizontal page overflow.
+The hero is the scan landing state: it contains the project marker, the thesis, one decisive result, a paper or evidence action, and a visible hint of the next section. Its right-hand visual is the landscape `winner-shift.png` leader-shift evidence graphic (1567x694), chosen because its six-row comparison remains legible at the hero width. The retired vertical evaluation-chain SVG is not a page surface. Preserve stable aspect ratios for evidence graphics. Use mobile-specific evidence compositions rather than scaled-down desktop canvases, and do not allow horizontal page overflow.
 
 Validate at 320x568, 390x844, 430x932, 768x1024, 1280x800, and 1440x900. Mobile side padding is 18px at 320px and 22px at 390px and above. Hero actions keep one line per label and stack when necessary. Long words, paths, confidence intervals, and numerical labels wrap or use controlled overflow without clipping.
 
