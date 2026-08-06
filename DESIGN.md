@@ -58,6 +58,8 @@ Validate at 320x568, 390x844, 430x932, 768x1024, 1280x800, and 1440x900. Mobile 
 
 Below 720px, tables transform into readable stacked records rather than miniature desktop tables. The experiment matrix becomes records labeled `Dimension`, `Frozen specification`, and `Why it matters`. The six-panel evidence table becomes records ordered by panel, R0 leader and RankIC, R4 active leader and Sharpe, interval, and result label; its semantic table remains available to assistive technology. Safe-area insets protect sticky header and footer actions, and below-fold images lazy-load with explicit intrinsic dimensions.
 
+The controlled diagnostic contract is the only full-width overview figure in the experiment-design section. It replaces the compact visible R0-R4 ladder at 768px and above. Below 768px, the stacked semantic contract table remains the primary reading view and a 44px text link opens the full-resolution figure; the wide raster preview is not scaled into unreadable mobile text.
+
 ## Motion
 
 Motion explains evidence and hierarchy; it never decorates empty space. The only evidence animation is a transparent Lottie scene for the poster-derived R0-to-R4 leader trace: a 960x360 canvas, 30 fps, 2.4 seconds, exact frame bounds `ip: 0`, `op: 72` (frames 0-71), and no loop. It reveals six neutral R0 origins, draws staged ease-out connectors, resolves unchanged paths in grey and changed paths in teal, then reveals `4 / 6 changed` in brick. Do not animate numerical values, confidence intervals, or scientific labels into misleading intermediate states.

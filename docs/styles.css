@@ -715,32 +715,6 @@ figcaption strong {
   font-weight: 700;
 }
 
-.ladder-inline {
-  margin: 40px 0 0 calc((100% + 24px) / 12);
-}
-
-.ladder-inline ol {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  margin: 0;
-  padding: 0;
-  border-top: 1px solid var(--rule);
-  list-style: none;
-}
-
-.ladder-inline li {
-  display: grid;
-  gap: 7px;
-  min-height: 108px;
-  padding: 15px 14px 15px 0;
-  border-bottom: 1px solid var(--rule);
-}
-
-.ladder-inline li + li {
-  padding-left: 14px;
-}
-
-.ladder-inline span,
 .cost-list span {
   color: var(--brick);
   font-family: var(--mono);
@@ -748,14 +722,22 @@ figcaption strong {
   font-weight: 700;
 }
 
-.ladder-inline strong {
-  font-size: 15px;
+.contract-figure {
+  margin: 48px 0 0 calc((100% + 24px) / 12);
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
 }
 
-.ladder-inline small {
-  color: var(--grey);
-  font-size: 12px;
-  line-height: 1.35;
+.contract-figure img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1916 / 821;
+  object-fit: contain;
+  background: var(--white);
+}
+
+.contract-figure figcaption {
+  align-items: start;
 }
 
 .inline-links {
@@ -1366,7 +1348,7 @@ figcaption strong {
   .mechanism-table-wrap,
   .limits-table-wrap,
   .result-table-wrap,
-  .ladder-inline,
+  .contract-figure,
   .inline-links,
   .mechanism-example,
   .evidence-legend,
@@ -1445,6 +1427,12 @@ figcaption strong {
 
   .materials-grid {
     gap: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contract-figure {
+    display: none;
   }
 }
 
@@ -1678,15 +1666,12 @@ figcaption strong {
     margin-top: 20px;
   }
 
-  .glossary-grid,
-  .ladder-inline ol {
+  .glossary-grid {
     grid-template-columns: 1fr;
   }
 
   .glossary-grid > div,
-  .glossary-grid > div + div,
-  .ladder-inline li,
-  .ladder-inline li + li {
+  .glossary-grid > div + div {
     min-height: 0;
     padding: 14px 0;
   }

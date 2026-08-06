@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -292,6 +293,39 @@ test("metadata and error recovery match the anonymous poster identity", () => {
   const png = readFileSync(resolve(root, "docs/assets/peg-bench-social.png"));
   assert.equal(png.readUInt32BE(16), 1200);
   assert.equal(png.readUInt32BE(20), 630);
+});
+
+test("controlled contract figure is unique, public-safe, and mobile-adapted", () => {
+  const html = read("docs/index.html");
+  const css = read("docs/styles.css");
+  const design = read("DESIGN.md");
+  const selected = "docs/assets/peg-controlled-diagnostic-contract.png";
+  const legacy = "docs/assets/peg-bench-thesis-overview.png";
+
+  assert.ok(exists(selected), `missing ${selected}`);
+  assert.ok(!exists(legacy), `obsolete duplicate remains: ${legacy}`);
+
+  const png = readFileSync(resolve(root, selected));
+  assert.equal(png.readUInt32BE(16), 1916, "contract figure width changed");
+  assert.equal(png.readUInt32BE(20), 821, "contract figure height changed");
+  assert.equal(
+    createHash("sha256").update(png).digest("hex"),
+    "d23bb8655583e1044e577ed5b65aaec6c2b61a5debe4200799b3178456fbe0ae",
+    "contract figure is not the approved source asset"
+  );
+
+  assert.equal(
+    (html.match(/peg-controlled-diagnostic-contract\.png/g) || []).length,
+    2,
+    "the selected figure must appear once as an image and once as its full-resolution link"
+  );
+  assert.doesNotMatch(html, /peg-bench-thesis-overview\.png|peg-bench-appendix\.png/);
+  assert.match(html, /class="contract-figure"/);
+  assert.match(html, /width="1916" height="821" loading="lazy"/);
+  assert.match(html, /Open the full-resolution contract figure/);
+  assert.doesNotMatch(html, /class="ladder-inline"/);
+  assert.match(css, /@media \(max-width: 767px\)[\s\S]*\.contract-figure[\s\S]*display:\s*none/);
+  assert.match(design, /controlled diagnostic contract/i);
 });
 
 export { exists, read, root };
