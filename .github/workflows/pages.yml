@@ -35,3 +35,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Pages can remain queued for just over ten minutes during a healthy rollout.
+          timeout: 1200000
