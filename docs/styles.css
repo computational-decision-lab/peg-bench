@@ -1927,6 +1927,23 @@ figcaption strong {
   }
 }
 
+@media (min-width: 721px) and (max-width: 860px) {
+  .hero-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: center;
+  }
+
+  .hero-copy {
+    grid-column: 1 / span 6;
+  }
+
+  .hero-evidence {
+    grid-column: 7 / -1;
+    max-width: 520px;
+    margin-left: auto;
+  }
+}
+
 @media (min-width: 390px) and (max-width: 720px) {
   .shell {
     width: min(calc(100% - 44px), 1180px);

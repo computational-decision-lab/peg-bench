@@ -359,4 +359,11 @@ test("the 320px hero keeps large type while revealing the reading path", () => {
   assert.match(css, /@media \(max-width: 359px\)[\s\S]*\.hero h1\s*\{[^}]*font-size:\s*36px/);
 });
 
+test("the tablet hero uses the editorial split composition", () => {
+  const css = read("docs/styles.css");
+  assert.match(css, /@media \(min-width: 721px\) and \(max-width: 860px\)[\s\S]*\.hero-grid\s*\{[^}]*grid-template-columns:\s*repeat\(12,\s*minmax\(0,\s*1fr\)\)/);
+  assert.match(css, /@media \(min-width: 721px\) and \(max-width: 860px\)[\s\S]*\.hero-copy\s*\{[^}]*grid-column:\s*1\s*\/\s*span\s*6/);
+  assert.match(css, /@media \(min-width: 721px\) and \(max-width: 860px\)[\s\S]*\.hero-evidence\s*\{[^}]*grid-column:\s*7\s*\/\s*-1/);
+});
+
 export { exists, read, root };
