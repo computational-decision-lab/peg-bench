@@ -351,4 +351,12 @@ test("typography scale is intentionally legible across the research narrative", 
   assert.match(css, /@media \(max-width: 720px\)[\s\S]*body\s*\{[^}]*font-size:\s*17px/);
 });
 
+test("the 320px hero keeps large type while revealing the reading path", () => {
+  const css = read("docs/styles.css");
+  assert.match(css, /@media \(max-width: 359px\)[\s\S]*\.hero\s*\{[^}]*padding-block:\s*32px\s+18px/);
+  assert.match(css, /@media \(max-width: 359px\)[\s\S]*\.hero-grid\s*\{[^}]*gap:\s*18px/);
+  assert.match(css, /@media \(max-width: 359px\)[\s\S]*\.hero-actions\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)\s+minmax\(0,\s*1\.12fr\)\s+auto/);
+  assert.match(css, /@media \(max-width: 359px\)[\s\S]*\.hero h1\s*\{[^}]*font-size:\s*36px/);
+});
+
 export { exists, read, root };

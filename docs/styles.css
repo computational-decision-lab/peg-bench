@@ -1938,6 +1938,14 @@ figcaption strong {
     width: min(calc(100% - 36px), 1180px);
   }
 
+  .hero {
+    padding-block: 32px 18px;
+  }
+
+  .hero-grid {
+    gap: 18px;
+  }
+
   .wordmark {
     font-size: 17px;
   }
@@ -1951,16 +1959,24 @@ figcaption strong {
     font-size: 36px;
   }
 
+  .hero-thesis {
+    margin-bottom: 20px;
+  }
+
   .reader-map ol {
     grid-template-columns: 1fr;
   }
 
   .hero-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr) auto;
+    gap: 8px;
     align-items: stretch;
   }
 
-  .button {
-    flex: 1 1 140px;
+  .hero-actions .button {
+    min-width: 0;
+    padding-inline: 8px;
   }
 
   .responsive-table td,
