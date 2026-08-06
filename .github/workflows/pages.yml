@@ -34,7 +34,67 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        timeout-minutes: 35
+        uses: actions/github-script@v7
         with:
-          # Pages can remain queued for just over ten minutes during a healthy rollout.
-          timeout: 1200000
+          github-token: ${{ github.token }}
+          script: |
+            const owner = context.repo.owner
+            const repo = context.repo.repo
+            const artifacts = await github.paginate(
+              github.rest.actions.listWorkflowRunArtifacts,
+              { owner, repo, run_id: context.runId, per_page: 100 }
+            )
+            const matches = artifacts.filter((artifact) => artifact.name === 'github-pages')
+            if (matches.length !== 1) {
+              throw new Error(`Expected exactly one github-pages artifact, found ${matches.length}`)
+            }
+
+            const idToken = await core.getIDToken()
+            const created = await github.request('POST /repos/{owner}/{repo}/pages/deployments', {
+              owner,
+              repo,
+              artifact_id: matches[0].id,
+              pages_build_version: context.sha,
+              oidc_token: idToken
+            })
+            const deployment = created.data
+            const deploymentId = deployment.id || deployment.status_url?.split('/').pop() || context.sha
+            const pageUrl = deployment.page_url || `https://${owner}.github.io/${repo}/`
+            core.setOutput('page_url', pageUrl)
+            core.info(`Created Pages deployment for ${context.sha}, ID: ${deploymentId}`)
+
+            const terminalFailures = new Set([
+              'deployment_failed',
+              'deployment_perms_error',
+              'deployment_content_failed',
+              'deployment_cancelled',
+              'deployment_lost'
+            ])
+            const deadline = Date.now() + 30 * 60 * 1000
+            while (Date.now() < deadline) {
+              await new Promise((resolve) => setTimeout(resolve, 10000))
+              const statusResponse = await github.request(
+                'GET /repos/{owner}/{repo}/pages/deployments/{deployment_id}',
+                { owner, repo, deployment_id: deploymentId }
+              )
+              const status = statusResponse.data.status
+              core.info(`Current Pages deployment status: ${status}`)
+              if (status === 'succeed') {
+                core.setOutput('status', 'succeed')
+                return
+              }
+              if (terminalFailures.has(status)) {
+                throw new Error(`Pages deployment failed with status: ${status}`)
+              }
+            }
+
+            try {
+              await github.request(
+                'POST /repos/{owner}/{repo}/pages/deployments/{deployment_id}/cancel',
+                { owner, repo, deployment_id: deploymentId }
+              )
+            } catch (error) {
+              core.warning(`Unable to cancel timed-out Pages deployment: ${error.message}`)
+            }
+            throw new Error('Pages deployment did not finish within 30 minutes')
